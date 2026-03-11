@@ -1,0 +1,1176 @@
+[
+  {
+    "id": "data-analytics",
+    "title": "Data Analytics",
+    "colorTheme": "indigo",
+    "description": "Data analysts are the storytellers of the tech world. You take messy, raw data and turn it into clear insights that help companies make smarter decisions. Think of it like being a detective — you dig through numbers to find patterns, trends, and answers that nobody else can see. Every company with data (which is every company) needs people who can make sense of it.",
+    "salaryRange": "$55,000 – $95,000",
+    "averageSalary": "$75,000",
+    "demandLevel": "Very High",
+    "timeToTransition": "3 – 6 months",
+    "whatYoullActuallyDo": [
+      "Pull data from databases using SQL to answer business questions",
+      "Clean and organize messy datasets so they're usable",
+      "Build dashboards and charts in Tableau or Power BI that executives actually look at",
+      "Write reports that explain what the data means in plain English",
+      "Collaborate with product, marketing, and engineering teams to define what to measure",
+      "Spot trends and anomalies — like why did sales drop 20% last Tuesday?"
+    ],
+    "aiSkills": [
+      {
+        "name": "Prompt Engineering for SQL Queries",
+        "description": "Use ChatGPT or Claude to write, debug, and optimize SQL queries. Instead of memorizing every SQL function, you describe what you need in plain English and the AI writes the query for you."
+      },
+      {
+        "name": "AI-Powered Data Cleaning",
+        "description": "Use tools like Code Interpreter or Claude to automatically find and fix messy data — missing values, duplicates, wrong formats. What used to take hours now takes minutes."
+      },
+      {
+        "name": "Automated Visualization Generation",
+        "description": "Describe the chart you want in words, and AI tools generate the Python/R code to create it. You focus on the story, not the syntax."
+      },
+      {
+        "name": "Natural Language Data Exploration",
+        "description": "Ask questions about your data in plain English using AI tools. 'What were our top 5 products last quarter?' gets you an instant answer without writing a single query."
+      },
+      {
+        "name": "Predictive Modeling with AI Assistance",
+        "description": "Use AI to build basic forecasting models. You don't need a PhD in statistics — AI helps you pick the right model, train it, and interpret the results."
+      },
+      {
+        "name": "Automated Report Generation",
+        "description": "Use AI to turn raw analysis into polished written reports and executive summaries. Feed it your findings and it drafts the narrative."
+      }
+    ],
+    "transferableSkills": [
+      {
+        "name": "Attention to Detail",
+        "from": "Admin, Finance, Accounting",
+        "description": "Your ability to spot errors and inconsistencies is exactly what data cleaning requires. Accountants who catch a $0.01 discrepancy make excellent data analysts."
+      },
+      {
+        "name": "Storytelling & Communication",
+        "from": "Sales, Marketing, Teaching",
+        "description": "The best analysts aren't just number-crunchers — they explain findings so anyone can understand. Your ability to present information clearly is a superpower."
+      },
+      {
+        "name": "Problem Solving",
+        "from": "Any field",
+        "description": "Every day you've solved problems at work — figuring out schedules, resolving customer issues, fixing processes. Analytics is just problem solving with data."
+      },
+      {
+        "name": "Critical Thinking",
+        "from": "Research, Law, Healthcare",
+        "description": "Questioning assumptions and evaluating evidence is at the heart of data analysis. If you've ever asked 'but does this actually make sense?', you think like an analyst."
+      },
+      {
+        "name": "Business Acumen",
+        "from": "Operations, Management, Retail",
+        "description": "Understanding how a business works helps you ask the right questions. Technical analysts often lack this — it's your competitive edge."
+      }
+    ],
+    "roadmap": [
+      {
+        "phase": "Phase 1",
+        "title": "Build Your Foundation",
+        "timeframe": "Weeks 1 – 4",
+        "description": "Learn the core tools every analyst uses on day one. Focus on getting comfortable, not perfect.",
+        "steps": [
+          "Learn SQL basics — SELECT, WHERE, JOIN, GROUP BY (this is the #1 skill employers look for)",
+          "Complete Google Data Analytics Certificate on Coursera (free with trial)",
+          "Set up a free Tableau Public account and follow along with 3 guided tutorials",
+          "Learn spreadsheet fundamentals — pivot tables, VLOOKUP, conditional formatting in Google Sheets or Excel",
+          "Practice with real datasets from Kaggle's beginner-friendly datasets"
+        ]
+      },
+      {
+        "phase": "Phase 2",
+        "title": "Level Up Your Skills",
+        "timeframe": "Weeks 5 – 10",
+        "description": "Go deeper on SQL, start learning Python, and begin building things you can show employers.",
+        "steps": [
+          "Intermediate SQL — subqueries, window functions, CTEs (Common Table Expressions)",
+          "Learn Python basics — focus on pandas library for data manipulation",
+          "Build your first dashboard in Tableau using a public dataset (e.g., Airbnb listings, COVID data)",
+          "Learn basic statistics — mean, median, standard deviation, correlation (Khan Academy is free)",
+          "Practice AI-assisted analysis: use ChatGPT/Claude to help write and debug SQL and Python code",
+          "Start a portfolio on GitHub — even simple projects count"
+        ]
+      },
+      {
+        "phase": "Phase 3",
+        "title": "Build Real Projects",
+        "timeframe": "Weeks 11 – 16",
+        "description": "Create 2-3 portfolio projects that prove you can do the job. These are what get you interviews.",
+        "steps": [
+          "Project 1: Clean a messy dataset, analyze it, and present findings in a Tableau dashboard",
+          "Project 2: Use SQL to answer 5+ business questions from a realistic database (try Mode Analytics' free SQL tutorial)",
+          "Project 3: Build an end-to-end analysis — collect data, clean it, analyze it, visualize it, write up findings",
+          "Write a blog post or LinkedIn article explaining one of your projects in plain English",
+          "Get feedback on your portfolio from r/dataanalysis or analytics Discord communities"
+        ]
+      },
+      {
+        "phase": "Phase 4",
+        "title": "Get Hired",
+        "timeframe": "Weeks 17 – 24",
+        "description": "Time to land the job. Focus on applications, networking, and interview prep.",
+        "steps": [
+          "Polish your LinkedIn — headline should say 'Data Analyst' not 'Aspiring Data Analyst'",
+          "Apply to 5-10 jobs per week — focus on 'Junior Data Analyst' and 'Business Analyst' roles",
+          "Practice SQL interview questions on StrataScratch or LeetCode (SQL section)",
+          "Prepare for case study interviews — practice explaining your analysis process out loud",
+          "Network: attend local data meetups, comment on LinkedIn posts, reach out to analysts for coffee chats",
+          "Apply to apprenticeship programs listed below (Google, Microsoft Leap)",
+          "Consider contract/freelance analytics work on Upwork to build real experience"
+        ]
+      }
+    ],
+    "freeResources": [
+      {
+        "name": "Google Data Analytics Certificate",
+        "url": "https://www.coursera.org/professional-certificates/google-data-analytics",
+        "type": "Course",
+        "description": "The gold standard free certificate. Covers spreadsheets, SQL, Tableau, and R. Takes about 6 months part-time."
+      },
+      {
+        "name": "SQLBolt",
+        "url": "https://sqlbolt.com/",
+        "type": "Interactive Tutorial",
+        "description": "Learn SQL through hands-on, interactive exercises. No setup required — runs in your browser."
+      },
+      {
+        "name": "Kaggle Learn",
+        "url": "https://www.kaggle.com/learn",
+        "type": "Interactive Tutorial",
+        "description": "Free micro-courses on Python, Pandas, Data Visualization, and more. Practical and project-based."
+      },
+      {
+        "name": "Tableau Public Resources",
+        "url": "https://public.tableau.com/en-us/s/resources",
+        "type": "Tool + Tutorials",
+        "description": "Free version of Tableau with tons of guided tutorials. Build dashboards and publish them to your portfolio."
+      },
+      {
+        "name": "Khan Academy – Statistics",
+        "url": "https://www.khanacademy.org/math/statistics-probability",
+        "type": "Course",
+        "description": "Free, well-explained statistics fundamentals. Covers everything you need for entry-level analytics."
+      },
+      {
+        "name": "Mode SQL Tutorial",
+        "url": "https://mode.com/sql-tutorial/",
+        "type": "Interactive Tutorial",
+        "description": "Practice SQL on real-world datasets. Great for intermediate skills and interview prep."
+      }
+    ]
+  },
+  {
+    "id": "software-engineering",
+    "title": "Software Engineering",
+    "colorTheme": "emerald",
+    "description": "Software engineers build the apps, websites, and systems that millions of people use every day. You write code to create new features, squash bugs, and make things run faster. The best part? With AI tools like Copilot and Claude, you don't need to memorize every syntax detail — you need to think logically, break problems into smaller pieces, and communicate clearly with your team. This is the most accessible it's ever been to become a software engineer.",
+    "salaryRange": "$70,000 – $130,000",
+    "averageSalary": "$95,000",
+    "demandLevel": "Extremely High",
+    "timeToTransition": "4 – 9 months",
+    "whatYoullActuallyDo": [
+      "Write code in languages like JavaScript, Python, or TypeScript to build features",
+      "Review your teammates' code and have yours reviewed (called 'pull requests')",
+      "Debug issues — figure out why something broke and fix it",
+      "Participate in daily standups and sprint planning with your team",
+      "Write tests to make sure your code works correctly",
+      "Collaborate with designers and product managers to turn ideas into working software"
+    ],
+    "aiSkills": [
+      {
+        "name": "AI-Assisted Coding with Copilot/Cursor",
+        "description": "Use AI coding assistants that autocomplete your code, suggest entire functions, and help you write code faster. It's like having a senior developer pair-programming with you 24/7."
+      },
+      {
+        "name": "Debugging with LLMs",
+        "description": "Paste error messages into Claude or ChatGPT and get plain-English explanations of what went wrong and how to fix it. No more staring at cryptic stack traces for hours."
+      },
+      {
+        "name": "AI-Generated Unit Tests",
+        "description": "Let AI write your test cases. Describe what your function should do, and AI generates comprehensive tests that catch edge cases you might miss."
+      },
+      {
+        "name": "Code Refactoring with AI",
+        "description": "Ask AI to improve your code's readability, performance, or structure. It's like having a code review from a senior engineer on demand."
+      },
+      {
+        "name": "Learning New Frameworks with AI",
+        "description": "When you need to learn React, Next.js, or any new technology, AI can explain concepts, generate starter code, and walk you through tutorials tailored to your level."
+      },
+      {
+        "name": "AI-Powered Documentation",
+        "description": "Generate clear documentation and code comments automatically. AI reads your code and explains what it does, making your work easier for others to understand."
+      }
+    ],
+    "transferableSkills": [
+      {
+        "name": "Logic and Reasoning",
+        "from": "Math, Science, Law, Chess",
+        "description": "Programming is logic in action. If you can follow a recipe, troubleshoot a car problem, or build IKEA furniture from instructions, you can learn to code."
+      },
+      {
+        "name": "Project Management",
+        "from": "Any management role",
+        "description": "Breaking large tasks into smaller ones, estimating timelines, and coordinating with others — you've been doing software project management without knowing it."
+      },
+      {
+        "name": "Creativity",
+        "from": "Design, Arts, Marketing, Writing",
+        "description": "Great software isn't just functional — it's elegant. Creative problem-solving helps you find solutions others miss and build things people love to use."
+      },
+      {
+        "name": "Continuous Learning",
+        "from": "Any field",
+        "description": "Tech changes fast, but so does every industry. Your ability to learn new skills and adapt is more valuable than any single programming language."
+      },
+      {
+        "name": "Communication",
+        "from": "Teaching, Sales, Customer Service",
+        "description": "Writing clear code is like writing clear English. Explaining technical concepts to non-technical stakeholders is a skill most engineers struggle with — and you already have it."
+      }
+    ],
+    "roadmap": [
+      {
+        "phase": "Phase 1",
+        "title": "Learn to Code",
+        "timeframe": "Weeks 1 – 6",
+        "description": "Pick ONE language and stick with it. JavaScript is recommended because it works for both websites and servers.",
+        "steps": [
+          "Complete freeCodeCamp's Responsive Web Design certification (HTML + CSS)",
+          "Learn JavaScript fundamentals — variables, functions, loops, arrays, objects",
+          "Build 3 small projects: a calculator, a to-do list, and a quiz app",
+          "Set up VS Code with GitHub Copilot (free for students) or Cursor",
+          "Learn Git basics — clone, commit, push, pull, branch (this is how all teams collaborate)",
+          "Create a GitHub account and push your projects there"
+        ]
+      },
+      {
+        "phase": "Phase 2",
+        "title": "Build with Frameworks",
+        "timeframe": "Weeks 7 – 14",
+        "description": "Learn a modern framework that employers actually hire for. React is the most popular choice.",
+        "steps": [
+          "Learn React fundamentals — components, props, state, hooks",
+          "Build a full project with React (e.g., a weather app that calls a real API)",
+          "Learn basic backend concepts — REST APIs, HTTP methods, JSON",
+          "Try Node.js + Express to build a simple API",
+          "Learn to use databases — start with a simple one like SQLite or use a service like Supabase",
+          "Practice using AI assistants daily: ask Copilot to write functions, then understand what it wrote"
+        ]
+      },
+      {
+        "phase": "Phase 3",
+        "title": "Build Portfolio Projects",
+        "timeframe": "Weeks 15 – 22",
+        "description": "Build 2-3 impressive projects that solve real problems. Quality over quantity.",
+        "steps": [
+          "Project 1: A full-stack app with user authentication (e.g., a notes app, budget tracker)",
+          "Project 2: An app that uses an external API (e.g., movie search, recipe finder, weather dashboard)",
+          "Project 3: A collaborative or unique project that shows personality (e.g., a game, a tool for your hobby)",
+          "Deploy all projects so they're live on the internet (use Vercel or Netlify — both free)",
+          "Write a README for each project explaining what it does, what you learned, and how to run it",
+          "Contribute to one open-source project on GitHub (even fixing a typo in docs counts)"
+        ]
+      },
+      {
+        "phase": "Phase 4",
+        "title": "Get Hired",
+        "timeframe": "Weeks 23 – 36",
+        "description": "Apply strategically and prepare for technical interviews.",
+        "steps": [
+          "Build a personal portfolio website showcasing your projects",
+          "Practice coding challenges on LeetCode (Easy level) — focus on arrays, strings, and hashmaps",
+          "Apply to apprenticeship programs (Google, Microsoft Leap, LinkedIn REACH, Airbnb Connect)",
+          "Apply to 10+ junior developer roles per week",
+          "Practice behavioral interview questions using the STAR method",
+          "Do mock technical interviews with friends or on Pramp (free)",
+          "Network on Twitter/X and LinkedIn — share what you're building and learning",
+          "Attend local meetups and hackathons"
+        ]
+      }
+    ],
+    "freeResources": [
+      {
+        "name": "freeCodeCamp",
+        "url": "https://www.freecodecamp.org/",
+        "type": "Full Curriculum",
+        "description": "The best free, comprehensive coding curriculum. Covers HTML, CSS, JavaScript, React, Node.js, and more with hands-on projects."
+      },
+      {
+        "name": "The Odin Project",
+        "url": "https://www.theodinproject.com/",
+        "type": "Full Curriculum",
+        "description": "A free, open-source curriculum that teaches full-stack web development with real-world projects. Very thorough."
+      },
+      {
+        "name": "JavaScript.info",
+        "url": "https://javascript.info/",
+        "type": "Reference",
+        "description": "The modern JavaScript tutorial. Clear explanations with interactive examples. Bookmark this — you'll use it constantly."
+      },
+      {
+        "name": "CS50 by Harvard",
+        "url": "https://cs50.harvard.edu/x/",
+        "type": "University Course",
+        "description": "Harvard's legendary intro to computer science. Free on YouTube/edX. Gives you the fundamentals that make everything else click."
+      },
+      {
+        "name": "Scrimba",
+        "url": "https://scrimba.com/",
+        "type": "Interactive Course",
+        "description": "Interactive coding screencasts where you can pause and edit the instructor's code. Many free courses on React and JavaScript."
+      },
+      {
+        "name": "LeetCode (Easy Problems)",
+        "url": "https://leetcode.com/",
+        "type": "Interview Prep",
+        "description": "Practice coding interview questions. Start with Easy difficulty. Focus on the top 50 most-asked questions."
+      }
+    ]
+  },
+  {
+    "id": "program-management",
+    "title": "Program Management",
+    "colorTheme": "amber",
+    "description": "Program managers are the glue that holds tech teams together. You don't write code — you make sure the right things get built, on time, and without chaos. You run meetings, track progress, remove blockers, and communicate between engineering, design, and leadership. If you've ever organized a complex event, managed a team, or coordinated anything involving multiple people and deadlines, you already have the core skills for this role.",
+    "salaryRange": "$75,000 – $130,000",
+    "averageSalary": "$100,000",
+    "demandLevel": "High",
+    "timeToTransition": "2 – 5 months",
+    "whatYoullActuallyDo": [
+      "Run sprint planning meetings and daily standups with engineering teams",
+      "Create and maintain project timelines, roadmaps, and status documents",
+      "Identify risks early and create mitigation plans before things go wrong",
+      "Communicate project status to leadership and stakeholders in clear, concise updates",
+      "Remove blockers — if an engineer is stuck waiting on another team, you make the call or send the email",
+      "Write project specifications and requirements documents that engineering teams build from"
+    ],
+    "aiSkills": [
+      {
+        "name": "AI-Powered Meeting Summaries",
+        "description": "Use AI tools to automatically summarize meeting recordings into action items, decisions, and follow-ups. Never miss an important detail from a 1-hour meeting again."
+      },
+      {
+        "name": "Drafting Project Specs with AI",
+        "description": "Describe a feature in plain language and have AI generate a structured project specification — complete with requirements, success metrics, edge cases, and timeline estimates."
+      },
+      {
+        "name": "Risk Assessment Analysis",
+        "description": "Use AI to analyze project plans and identify potential risks, dependencies, and bottlenecks you might have missed. It's like having a second brain reviewing your strategy."
+      },
+      {
+        "name": "Stakeholder Communication Drafting",
+        "description": "Generate polished status updates, executive summaries, and stakeholder emails. AI helps you strike the right tone — detailed for engineers, concise for executives."
+      },
+      {
+        "name": "Data-Driven Decision Support",
+        "description": "Use AI to analyze project metrics, velocity data, and resource allocation to make better planning decisions backed by numbers."
+      },
+      {
+        "name": "Process Documentation",
+        "description": "Have AI help create clear process documents, runbooks, and onboarding guides. What took a day to write now takes an hour."
+      }
+    ],
+    "transferableSkills": [
+      {
+        "name": "Organization & Planning",
+        "from": "Event Planning, Admin, Operations",
+        "description": "Managing timelines, coordinating people, and keeping track of a hundred moving pieces? That's literally the job description of a program manager."
+      },
+      {
+        "name": "Communication",
+        "from": "Teaching, HR, Sales, Customer Service",
+        "description": "PMs spend 70% of their time communicating. Your ability to explain complex things simply and rally people around a goal is the most valuable skill in this role."
+      },
+      {
+        "name": "Leadership Without Authority",
+        "from": "Any cross-functional role",
+        "description": "PMs don't manage people directly — they influence through persuasion, trust, and clarity. If you've ever led a project without being the boss, you know this skill."
+      },
+      {
+        "name": "Strategic Planning",
+        "from": "Business, Consulting, Military",
+        "description": "Thinking long-term while executing short-term. Balancing competing priorities. Knowing when to say no. These strategic instincts transfer directly."
+      },
+      {
+        "name": "Conflict Resolution",
+        "from": "HR, Management, Social Work, Parenting",
+        "description": "When engineering wants to rebuild the whole system and sales wants the feature yesterday, the PM finds the middle ground. Your mediation skills are gold."
+      }
+    ],
+    "roadmap": [
+      {
+        "phase": "Phase 1",
+        "title": "Learn the Language of Tech",
+        "timeframe": "Weeks 1 – 4",
+        "description": "You don't need to code, but you need to understand how software gets built. Learn enough to be dangerous.",
+        "steps": [
+          "Learn Agile/Scrum methodology — take the free Scrum.org learning path",
+          "Understand the software development lifecycle (SDLC): planning, development, testing, deployment",
+          "Learn basic tech vocabulary: API, frontend, backend, database, deployment, sprint, standup",
+          "Get familiar with tools: Jira, Asana, or Linear (project tracking), Confluence or Notion (documentation)",
+          "Read 'Inspired' by Marty Cagan — the bible of product/program management in tech",
+          "Watch day-in-the-life videos of TPMs at Google, Amazon, and Meta on YouTube"
+        ]
+      },
+      {
+        "phase": "Phase 2",
+        "title": "Get Certified & Practice",
+        "timeframe": "Weeks 5 – 10",
+        "description": "Build credentials and start applying PM thinking to real scenarios.",
+        "steps": [
+          "Get your Google Project Management Certificate (Coursera, free with trial)",
+          "Study for and pass the PSM I (Professional Scrum Master) exam ($150 — worth it for your resume)",
+          "Practice writing project specs — pick any app feature and write the requirements document",
+          "Learn SQL basics (just SELECT/WHERE/JOIN) — PMs who can query data stand out",
+          "Practice stakeholder communication: write 5 mock status update emails for different audiences",
+          "Join PM communities: Lenny's Newsletter, The Product Folks, r/projectmanagement"
+        ]
+      },
+      {
+        "phase": "Phase 3",
+        "title": "Build Your PM Portfolio",
+        "timeframe": "Weeks 11 – 16",
+        "description": "Create tangible proof that you can do the job, even without the title.",
+        "steps": [
+          "Create a case study: pick a real app, identify a problem, and write a full project plan to fix it",
+          "Volunteer to manage a project — local nonprofit, open source project, or community event",
+          "Document everything: timelines you created, meetings you ran, problems you solved",
+          "Build a simple portfolio website or Notion page showcasing your case studies",
+          "Practice using AI tools for your PM workflow: meeting summaries, spec writing, risk analysis"
+        ]
+      },
+      {
+        "phase": "Phase 4",
+        "title": "Get Hired",
+        "timeframe": "Weeks 17 – 20",
+        "description": "PMs get hired through networking as much as applications. Do both.",
+        "steps": [
+          "Apply for 'Technical Program Manager', 'Project Manager', and 'Program Coordinator' roles",
+          "Search for TPM apprenticeships (Google, Microsoft Leap)",
+          "Practice PM interview questions: 'Tell me about a time you managed conflicting priorities'",
+          "Practice case study interviews: 'How would you launch feature X?'",
+          "Network aggressively — reach out to PMs at target companies on LinkedIn for informational interviews",
+          "Highlight your transferable experience: 'I managed X people, Y budget, Z timelines in my previous role'",
+          "Consider roles like 'Scrum Master' or 'Project Coordinator' as stepping stones into tech"
+        ]
+      }
+    ],
+    "freeResources": [
+      {
+        "name": "Google Project Management Certificate",
+        "url": "https://www.coursera.org/professional-certificates/google-project-management",
+        "type": "Certificate",
+        "description": "Comprehensive project management course from Google. Covers Agile, Scrum, stakeholder management, and risk planning. Free with Coursera trial."
+      },
+      {
+        "name": "Scrum.org Open Assessments",
+        "url": "https://www.scrum.org/open-assessments",
+        "type": "Practice Tests",
+        "description": "Free practice assessments for Scrum methodology. Great way to test your knowledge and prep for PSM I certification."
+      },
+      {
+        "name": "Lenny's Newsletter",
+        "url": "https://www.lennysnewsletter.com/",
+        "type": "Newsletter",
+        "description": "The most-read newsletter in product and program management. Real-world advice from PMs at top companies. Free tier available."
+      },
+      {
+        "name": "Product School (Free Talks)",
+        "url": "https://productschool.com/product-management-events",
+        "type": "Webinars",
+        "description": "Free webinars and talks from PMs at Google, Meta, Amazon. Great for learning what the job actually looks like day-to-day."
+      },
+      {
+        "name": "Atlassian Agile Coach",
+        "url": "https://www.atlassian.com/agile",
+        "type": "Guide",
+        "description": "Free comprehensive guide to Agile methodology from the makers of Jira. Covers Scrum, Kanban, sprint planning, and more."
+      },
+      {
+        "name": "SQL for PMs (Mode Analytics)",
+        "url": "https://mode.com/sql-tutorial/",
+        "type": "Tutorial",
+        "description": "Free SQL tutorial. PMs who can pull their own data don't have to wait on analysts. Learn just enough SQL to be self-sufficient."
+      }
+    ]
+  },
+  {
+    "id": "marketing",
+    "title": "Marketing",
+    "colorTheme": "rose",
+    "description": "Tech marketers help amazing products find the people who need them. You blend creativity with data — writing compelling copy, running campaigns, analyzing what works, and telling a brand's story across channels. With AI tools, one marketer can now do what used to take a whole team. If you've ever convinced someone to try something new, written something that made people feel something, or obsessed over why one Instagram post did better than another — marketing in tech is your lane.",
+    "salaryRange": "$50,000 – $100,000",
+    "averageSalary": "$72,000",
+    "demandLevel": "High",
+    "timeToTransition": "2 – 4 months",
+    "whatYoullActuallyDo": [
+      "Write copy for websites, emails, ads, and social media that converts browsers into customers",
+      "Run and analyze paid ad campaigns on Google, Meta, LinkedIn, and TikTok",
+      "Track marketing metrics — click-through rates, conversion rates, cost per acquisition",
+      "Create content strategies: blog posts, newsletters, video scripts, and social media calendars",
+      "Collaborate with product and design teams on launch campaigns for new features",
+      "Use tools like Google Analytics, HubSpot, and Mailchimp to measure and optimize performance"
+    ],
+    "aiSkills": [
+      {
+        "name": "AI Content Generation & Ideation",
+        "description": "Use AI to brainstorm campaign ideas, write first drafts of blog posts, generate social media copy variations, and overcome writer's block. You edit and add the human touch — AI handles the heavy lifting."
+      },
+      {
+        "name": "SEO Optimization with AI",
+        "description": "Use AI tools to research keywords, optimize page titles and meta descriptions, analyze competitor content, and generate SEO-friendly content outlines. Rank higher with less guesswork."
+      },
+      {
+        "name": "Customer Sentiment Analysis",
+        "description": "Feed customer reviews, social mentions, and survey responses into AI to instantly understand how people feel about your product. Spot trends and concerns before they become problems."
+      },
+      {
+        "name": "Personalized Campaign Drafting",
+        "description": "Use AI to create multiple versions of emails, ads, and landing pages tailored to different audience segments. What used to require an agency now takes an afternoon."
+      },
+      {
+        "name": "AI-Powered Analytics Interpretation",
+        "description": "Paste your Google Analytics or campaign data into AI and ask 'what's working and what's not?' Get instant analysis and actionable recommendations."
+      },
+      {
+        "name": "Visual Content Creation with AI",
+        "description": "Use AI image generators and design tools to create social media graphics, ad mockups, and presentation visuals. Perfect for marketers who aren't designers."
+      }
+    ],
+    "transferableSkills": [
+      {
+        "name": "Communication & Writing",
+        "from": "Journalism, PR, English, Teaching",
+        "description": "If you can write a clear email, a compelling story, or a persuasive argument, you can write marketing copy. This is the single most important skill in marketing."
+      },
+      {
+        "name": "Psychology & Empathy",
+        "from": "Social Work, Counseling, Sales, Healthcare",
+        "description": "Understanding why people make decisions is the foundation of marketing. Your ability to put yourself in someone else's shoes directly translates to creating messages that resonate."
+      },
+      {
+        "name": "Data Interpretation",
+        "from": "Finance, Research, Analytics",
+        "description": "Modern marketing is data-driven. If you can read a spreadsheet and spot trends, you can analyze campaign performance and make optimization decisions."
+      },
+      {
+        "name": "Creativity & Design Sense",
+        "from": "Arts, Photography, Fashion, Interior Design",
+        "description": "Creating visually appealing content, understanding brand aesthetics, and thinking outside the box are what separate good marketers from great ones."
+      },
+      {
+        "name": "Relationship Building",
+        "from": "Sales, Hospitality, Community Management",
+        "description": "Marketing is about building relationships at scale. Your networking instincts and ability to build rapport translate perfectly to brand building and community engagement."
+      }
+    ],
+    "roadmap": [
+      {
+        "phase": "Phase 1",
+        "title": "Learn the Marketing Stack",
+        "timeframe": "Weeks 1 – 3",
+        "description": "Get familiar with the tools and concepts every tech marketer uses.",
+        "steps": [
+          "Complete Google Digital Marketing & E-commerce Certificate (Coursera, free with trial)",
+          "Set up Google Analytics on a personal website or blog (even a free WordPress site works)",
+          "Learn email marketing basics with Mailchimp's free tier — build a small email list and send a campaign",
+          "Study the marketing funnel: awareness, consideration, conversion, retention",
+          "Follow marketing leaders on LinkedIn and Twitter/X: Seth Godin, Rand Fishkin, Amanda Natividad",
+          "Read 'Everybody Writes' by Ann Handley — the essential guide to content marketing"
+        ]
+      },
+      {
+        "phase": "Phase 2",
+        "title": "Specialize & Build Skills",
+        "timeframe": "Weeks 4 – 8",
+        "description": "Pick a marketing specialty and go deep. You'll stand out more as a specialist than a generalist.",
+        "steps": [
+          "Choose a specialty: Content Marketing, Growth/Performance Marketing, Product Marketing, or Social Media",
+          "Learn SEO fundamentals — keyword research, on-page optimization, link building (Moz and Ahrefs have free courses)",
+          "Master one ad platform: Google Ads or Meta Ads Manager (both have free certification programs)",
+          "Learn to use AI tools in your daily workflow: content drafts, A/B test ideas, audience research",
+          "Study copywriting frameworks: AIDA (Attention, Interest, Desire, Action), PAS (Problem, Agitate, Solution)",
+          "Analyze 5 marketing campaigns from tech companies you admire — what worked and why?"
+        ]
+      },
+      {
+        "phase": "Phase 3",
+        "title": "Build Your Portfolio",
+        "timeframe": "Weeks 9 – 14",
+        "description": "Create real marketing work you can show in interviews. Results speak louder than resumes.",
+        "steps": [
+          "Start a blog or newsletter on a topic you're passionate about — this IS your portfolio",
+          "Run a small paid ad campaign (even $50 on Meta) and document the results and learnings",
+          "Create a mock marketing campaign for a real product: strategy, copy, visuals, metrics plan",
+          "Write 3-5 sample pieces: blog post, email sequence, social media campaign, landing page copy",
+          "Build a simple portfolio website showcasing your campaigns, writing, and results",
+          "Offer free marketing help to a local business or nonprofit to get real-world results"
+        ]
+      },
+      {
+        "phase": "Phase 4",
+        "title": "Get Hired",
+        "timeframe": "Weeks 15 – 18",
+        "description": "Tech companies are always hiring marketers. Position yourself right and the interviews will come.",
+        "steps": [
+          "Apply for roles: 'Marketing Coordinator', 'Content Marketing Associate', 'Growth Marketing Analyst'",
+          "Target startups — they often care more about skills and portfolio than years of experience",
+          "Prepare for marketing interviews: be ready to present a campaign idea or audit a landing page live",
+          "Build your personal brand on LinkedIn — share marketing insights, case studies, and learnings weekly",
+          "Network with tech marketers — most marketing roles are filled through referrals",
+          "Consider freelance marketing work on Upwork or Fiverr to build client experience and testimonials",
+          "Apply to Google's marketing apprenticeship and other tech company early-career programs"
+        ]
+      }
+    ],
+    "freeResources": [
+      {
+        "name": "Google Digital Marketing Certificate",
+        "url": "https://www.coursera.org/professional-certificates/google-digital-marketing-ecommerce",
+        "type": "Certificate",
+        "description": "Google's comprehensive digital marketing course. Covers SEO, SEM, social media, email, and analytics. Free with Coursera trial."
+      },
+      {
+        "name": "HubSpot Academy",
+        "url": "https://academy.hubspot.com/",
+        "type": "Certifications",
+        "description": "Free certifications in inbound marketing, content marketing, email marketing, and social media. Recognized across the industry."
+      },
+      {
+        "name": "Google Ads Certification",
+        "url": "https://skillshop.withgoogle.com/",
+        "type": "Certification",
+        "description": "Free certification directly from Google. Proves you can run paid search and display campaigns. A resume must-have."
+      },
+      {
+        "name": "Moz SEO Learning Center",
+        "url": "https://moz.com/beginners-guide-to-seo",
+        "type": "Guide",
+        "description": "The most-referenced SEO guide on the internet. Free, comprehensive, and updated regularly."
+      },
+      {
+        "name": "Copyblogger",
+        "url": "https://copyblogger.com/blog/",
+        "type": "Blog",
+        "description": "The gold standard for learning copywriting and content marketing. Years of free, actionable advice."
+      },
+      {
+        "name": "Canva Design School",
+        "url": "https://www.canva.com/designschool/",
+        "type": "Tutorials",
+        "description": "Free design tutorials and templates. Learn to create professional-looking marketing visuals without being a graphic designer."
+      }
+    ]
+  },
+  {
+    "id": "ux-ui-design",
+    "title": "UX/UI Design",
+    "colorTheme": "cyan",
+    "description": "UX/UI designers make technology feel human. You research how people actually use products, then design interfaces that are intuitive, beautiful, and accessible. It's the perfect blend of creativity and problem-solving — you're part psychologist, part artist, part detective. If you've ever been frustrated by a confusing app and thought 'I could make this better,' this is your career. With tools like Figma and AI-powered design assistants, the barrier to entry has never been lower.",
+    "salaryRange": "$60,000 – $110,000",
+    "averageSalary": "$85,000",
+    "demandLevel": "Very High",
+    "timeToTransition": "3 – 7 months",
+    "whatYoullActuallyDo": [
+      "Research user needs through interviews, surveys, and usability testing",
+      "Create wireframes and prototypes in Figma to test ideas before engineers build them",
+      "Design polished, pixel-perfect interfaces for web and mobile apps",
+      "Build and maintain design systems — reusable component libraries that keep products consistent",
+      "Collaborate with product managers and engineers to turn requirements into intuitive experiences",
+      "Present design decisions to stakeholders and iterate based on feedback and data"
+    ],
+    "aiSkills": [
+      {
+        "name": "AI-Powered Design Generation",
+        "description": "Use tools like Midjourney, DALL-E, and Figma AI to rapidly generate design concepts, mood boards, and UI variations. Explore 10 directions in the time it used to take to sketch one."
+      },
+      {
+        "name": "AI User Research Analysis",
+        "description": "Feed interview transcripts and survey responses into AI to identify patterns, pain points, and opportunities. Synthesize hours of research data in minutes."
+      },
+      {
+        "name": "AI-Assisted Copywriting for UI",
+        "description": "Use AI to write clear, concise microcopy — button labels, error messages, onboarding flows. Good UX writing is invisible, and AI helps you get it right."
+      },
+      {
+        "name": "Automated Accessibility Audits",
+        "description": "Use AI tools to scan your designs for accessibility issues — color contrast, screen reader compatibility, keyboard navigation. Build inclusive products from the start."
+      },
+      {
+        "name": "Rapid Prototyping with AI",
+        "description": "Describe an interaction in plain English and have AI generate prototype code or Figma layouts. Test ideas with users faster than ever before."
+      },
+      {
+        "name": "AI Design System Management",
+        "description": "Use AI to audit design systems for inconsistencies, generate component documentation, and suggest improvements. Keep your design language clean and scalable."
+      }
+    ],
+    "transferableSkills": [
+      {
+        "name": "Empathy & Listening",
+        "from": "Healthcare, Social Work, Teaching, Counseling",
+        "description": "UX design is fundamentally about understanding people. Your ability to listen, observe, and put yourself in someone else's shoes is the most important UX skill there is."
+      },
+      {
+        "name": "Visual & Spatial Thinking",
+        "from": "Architecture, Art, Photography, Interior Design",
+        "description": "If you think in images, layouts, and spatial relationships, you already have a designer's brain. Translating ideas into visual form is what UI design is all about."
+      },
+      {
+        "name": "Storytelling",
+        "from": "Journalism, Marketing, Writing, Film",
+        "description": "Great UX tells a story — guiding users from point A to point B. Your ability to craft a narrative translates directly to designing user flows and journeys."
+      },
+      {
+        "name": "Research & Analysis",
+        "from": "Academia, Market Research, Science",
+        "description": "UX research is just research with a different subject. If you know how to form hypotheses, gather data, and draw conclusions, you can do user research."
+      },
+      {
+        "name": "Attention to Detail",
+        "from": "Quality Assurance, Editing, Accounting",
+        "description": "The difference between good and great design is in the details — spacing, alignment, consistency. Your eye for catching what's off makes you a natural UI designer."
+      }
+    ],
+    "roadmap": [
+      {
+        "phase": "Phase 1",
+        "title": "Learn Design Fundamentals",
+        "timeframe": "Weeks 1 – 4",
+        "description": "Master the tools and principles every designer uses. Figma is free and the industry standard.",
+        "steps": [
+          "Learn Figma basics — frames, auto-layout, components, and prototyping (Figma's own tutorials are excellent)",
+          "Study core design principles: hierarchy, contrast, alignment, proximity, repetition",
+          "Complete Google UX Design Certificate on Coursera (free with trial)",
+          "Learn color theory, typography basics, and spacing/grid systems",
+          "Study 5 well-designed apps (like Airbnb, Stripe, Linear) — analyze why they feel good to use",
+          "Start a design journal: screenshot UI patterns you love and explain what works"
+        ]
+      },
+      {
+        "phase": "Phase 2",
+        "title": "Learn UX Research & Process",
+        "timeframe": "Weeks 5 – 10",
+        "description": "Great design starts with understanding users. Learn the research methods that inform every design decision.",
+        "steps": [
+          "Learn user research methods: interviews, surveys, usability testing, card sorting",
+          "Practice creating user personas, journey maps, and empathy maps",
+          "Learn information architecture — how to organize content so people can find what they need",
+          "Study interaction design patterns — navigation, forms, modals, notifications",
+          "Learn wireframing: start with low-fidelity sketches before jumping to high-fidelity designs",
+          "Run a usability test on an existing product with 3-5 people (friends and family count)"
+        ]
+      },
+      {
+        "phase": "Phase 3",
+        "title": "Build Your Portfolio",
+        "timeframe": "Weeks 11 – 20",
+        "description": "Your portfolio is everything in design. Build 3 case studies that show your process, not just pretty screens.",
+        "steps": [
+          "Case Study 1: Redesign an existing app — research the problems, propose solutions, design the screens",
+          "Case Study 2: Design a new product from scratch — user research, wireframes, prototype, usability testing",
+          "Case Study 3: A design challenge or concept project that shows range (mobile app, dashboard, etc.)",
+          "Each case study should show your process: research → ideation → wireframes → final design → testing",
+          "Build your portfolio website — use Figma to design it, then build with a free tool like Framer or Webflow",
+          "Get portfolio feedback from design communities: Dribbble, Behance, ADPList, or r/UXDesign"
+        ]
+      },
+      {
+        "phase": "Phase 4",
+        "title": "Get Hired",
+        "timeframe": "Weeks 21 – 28",
+        "description": "Design hiring is portfolio-first. Lead with your work and your story.",
+        "steps": [
+          "Apply for roles: 'UX Designer', 'UI Designer', 'Product Designer', 'UX Researcher'",
+          "Prepare for the design challenge — most interviews include a take-home or whiteboard exercise",
+          "Practice presenting your case studies: explain your thinking, not just your screens",
+          "Apply to apprenticeship programs: Meta Design Apprenticeship, Google, Microsoft LEAP",
+          "Network with designers on ADPList (free mentorship), LinkedIn, and local design meetups",
+          "Consider freelance UX work on Toptal or Upwork to build client experience",
+          "Start a daily UI challenge (dailyui.co) to keep your skills sharp during the job search"
+        ]
+      }
+    ],
+    "freeResources": [
+      {
+        "name": "Google UX Design Certificate",
+        "url": "https://www.coursera.org/professional-certificates/google-ux-design",
+        "type": "Certificate",
+        "description": "Google's comprehensive UX design program. Covers research, wireframing, prototyping, and usability testing. Free with Coursera trial."
+      },
+      {
+        "name": "Figma for Beginners (Official)",
+        "url": "https://help.figma.com/hc/en-us/categories/360002051613-Get-started",
+        "type": "Tutorial",
+        "description": "Learn the industry-standard design tool directly from Figma. Free tool, free tutorials. This is where you'll spend most of your design time."
+      },
+      {
+        "name": "Laws of UX",
+        "url": "https://lawsofux.com/",
+        "type": "Reference",
+        "description": "A beautiful collection of UX design principles backed by psychology research. Bookmark this — you'll reference it in every project."
+      },
+      {
+        "name": "ADPList (Free Mentorship)",
+        "url": "https://adplist.org/",
+        "type": "Mentorship",
+        "description": "Free 1-on-1 mentorship sessions with working designers at top companies. Get portfolio reviews, career advice, and interview prep from the people doing the hiring."
+      },
+      {
+        "name": "Daily UI Challenge",
+        "url": "https://www.dailyui.co/",
+        "type": "Practice",
+        "description": "Get a design prompt every day for 100 days. Builds your skills and fills your portfolio with diverse work."
+      },
+      {
+        "name": "Nielsen Norman Group Articles",
+        "url": "https://www.nngroup.com/articles/",
+        "type": "Research",
+        "description": "The gold standard for UX research and best practices. Free articles from the world's leading UX research firm. Essential reading."
+      }
+    ]
+  },
+  {
+    "id": "product-management",
+    "title": "Product Management",
+    "colorTheme": "violet",
+    "description": "Product managers decide what gets built and why. You're the voice of the customer inside the company — you talk to users, analyze data, and work with engineering and design to ship products people love. You don't need to code or design, but you need to understand both worlds. PMs are often called 'the CEO of the product' because you own the strategy, the roadmap, and the results. If you're the person who always asks 'but does anyone actually need this?', you think like a PM.",
+    "salaryRange": "$80,000 – $140,000",
+    "averageSalary": "$110,000",
+    "demandLevel": "High",
+    "timeToTransition": "3 – 6 months",
+    "whatYoullActuallyDo": [
+      "Talk to customers and users to understand their problems and needs",
+      "Write product requirements documents (PRDs) that engineering teams build from",
+      "Prioritize features — decide what to build next based on impact and effort",
+      "Analyze product metrics: user engagement, retention, conversion, revenue",
+      "Run sprint planning with engineering and design — define what gets shipped each cycle",
+      "Present product strategy and results to leadership and stakeholders"
+    ],
+    "aiSkills": [
+      {
+        "name": "AI-Powered User Research Synthesis",
+        "description": "Feed user interview transcripts, support tickets, and app reviews into AI to instantly identify the top pain points, feature requests, and trends. What used to take a week of analysis now takes an hour."
+      },
+      {
+        "name": "PRD Generation with AI",
+        "description": "Describe a feature concept to AI and get a structured product requirements document — complete with user stories, acceptance criteria, edge cases, and success metrics. You refine, AI scaffolds."
+      },
+      {
+        "name": "Competitive Analysis Automation",
+        "description": "Use AI to research competitors, summarize their features, pricing, and positioning, and identify gaps in the market. Stay ahead without spending days in spreadsheets."
+      },
+      {
+        "name": "Data Analysis & SQL with AI",
+        "description": "PMs who can pull their own data move faster. Use AI to write SQL queries, analyze product metrics, and generate insights without waiting on the data team."
+      },
+      {
+        "name": "AI-Assisted Prioritization",
+        "description": "Input your backlog into AI along with your strategy goals and let it help you score and prioritize features using frameworks like RICE, ICE, or MoSCoW."
+      },
+      {
+        "name": "Stakeholder Communication Drafting",
+        "description": "Generate polished product update emails, launch announcements, and board-ready presentations. AI helps you tailor the message for engineers, executives, or customers."
+      }
+    ],
+    "transferableSkills": [
+      {
+        "name": "Customer Empathy",
+        "from": "Sales, Customer Service, Healthcare, Social Work",
+        "description": "Understanding what people need (not just what they say they want) is the foundation of product management. Your experience listening to customers gives you an edge most PMs lack."
+      },
+      {
+        "name": "Strategic Thinking",
+        "from": "Business, Consulting, Military, Entrepreneurship",
+        "description": "PMs think about the big picture while executing in the details. If you've ever developed a business strategy, planned a campaign, or set organizational priorities, you have PM DNA."
+      },
+      {
+        "name": "Data-Driven Decision Making",
+        "from": "Finance, Analytics, Research, Operations",
+        "description": "Good PMs back opinions with data. If you're used to making decisions based on numbers, reports, or evidence rather than gut feeling, you'll thrive in product."
+      },
+      {
+        "name": "Cross-Functional Collaboration",
+        "from": "Any role working across departments",
+        "description": "PMs work with everyone — engineering, design, marketing, sales, support. If you've ever been the person connecting different teams or translating between departments, that's product management."
+      },
+      {
+        "name": "Communication & Influence",
+        "from": "Teaching, Marketing, Management, Politics",
+        "description": "PMs lead through influence, not authority. Your ability to persuade, present clearly, and get buy-in from diverse stakeholders is the difference between a feature that ships and one that doesn't."
+      }
+    ],
+    "roadmap": [
+      {
+        "phase": "Phase 1",
+        "title": "Learn Product Thinking",
+        "timeframe": "Weeks 1 – 4",
+        "description": "Understand what product managers actually do and start thinking like one.",
+        "steps": [
+          "Read 'Inspired' by Marty Cagan — the definitive book on product management in tech",
+          "Learn product frameworks: Jobs To Be Done (JTBD), product-market fit, lean startup methodology",
+          "Study the product development lifecycle: discovery, definition, development, delivery, iteration",
+          "Analyze 3 products you use daily — identify their target users, value proposition, and business model",
+          "Subscribe to product newsletters: Lenny's Newsletter, Product Hunt Daily, SVPG blog",
+          "Watch PM talks on YouTube from Google, Meta, and Airbnb product leaders"
+        ]
+      },
+      {
+        "phase": "Phase 2",
+        "title": "Build Core PM Skills",
+        "timeframe": "Weeks 5 – 10",
+        "description": "Develop the technical and analytical skills that separate great PMs from mediocre ones.",
+        "steps": [
+          "Learn SQL basics — SELECT, WHERE, JOIN, GROUP BY (PMs who can query data move 3x faster)",
+          "Study product analytics: learn what metrics matter (DAU, retention, conversion, NPS)",
+          "Learn prioritization frameworks: RICE scoring, ICE, MoSCoW, Kano model",
+          "Practice writing PRDs — pick a feature for an app you use and write the full spec",
+          "Learn wireframing basics in Figma — you don't need to be a designer, but you need to communicate visually",
+          "Complete a product management course: Google PM course, Reforge (free content), or Product School talks"
+        ]
+      },
+      {
+        "phase": "Phase 3",
+        "title": "Build Your PM Portfolio",
+        "timeframe": "Weeks 11 – 18",
+        "description": "Create tangible evidence of product thinking. PMs are hired on how they think, not what they've shipped.",
+        "steps": [
+          "Case Study 1: Identify a problem with a real product, research users, propose a solution, and write the PRD",
+          "Case Study 2: Do a full product teardown — analyze an app's strategy, metrics, competitive positioning, and improvement opportunities",
+          "Case Study 3: Propose a new product or feature from scratch — market research, user personas, MVP definition, go-to-market strategy",
+          "Write product thinking blog posts on Medium or Substack — sharing your analysis publicly builds credibility",
+          "Volunteer to manage a product at a nonprofit or open source project to get real PM experience",
+          "Build a portfolio site or Notion page showcasing your case studies and product thinking"
+        ]
+      },
+      {
+        "phase": "Phase 4",
+        "title": "Get Hired",
+        "timeframe": "Weeks 19 – 24",
+        "description": "PM interviews are unique — they test how you think, not what you know. Prepare accordingly.",
+        "steps": [
+          "Apply for roles: 'Associate Product Manager', 'Product Manager', 'Product Analyst'",
+          "Target APM (Associate Product Manager) programs at Google, Meta, Salesforce, and startups",
+          "Practice PM interview types: product sense, analytical, execution, and behavioral",
+          "Do mock PM interviews on Exponent or with peers — practice out loud, not just in your head",
+          "Apply to Salesforce Pathfinder, Microsoft LEAP, and Google apprenticeships",
+          "Network with PMs — reach out on LinkedIn for informational interviews and ask about their path",
+          "Consider adjacent roles as stepping stones: business analyst, product analyst, or product operations"
+        ]
+      }
+    ],
+    "freeResources": [
+      {
+        "name": "Lenny's Newsletter",
+        "url": "https://www.lennysnewsletter.com/",
+        "type": "Newsletter",
+        "description": "The #1 newsletter for product managers. Real-world advice, frameworks, and interviews with PMs from top companies. Free tier available."
+      },
+      {
+        "name": "Product School (Free Talks)",
+        "url": "https://productschool.com/product-management-events",
+        "type": "Webinars",
+        "description": "Free webinars and talks from PMs at Google, Meta, Amazon, and Netflix. Learn what the job really looks like from people who do it."
+      },
+      {
+        "name": "Exponent PM Interview Prep",
+        "url": "https://www.tryexponent.com/courses/pm",
+        "type": "Interview Prep",
+        "description": "Free PM interview course with practice questions and frameworks. Essential for preparing for product sense and estimation questions."
+      },
+      {
+        "name": "SVPG Blog (Marty Cagan)",
+        "url": "https://www.svpg.com/articles/",
+        "type": "Blog",
+        "description": "Marty Cagan's blog on product management best practices. The gold standard for how top product teams operate. Free and invaluable."
+      },
+      {
+        "name": "Reforge (Free Content)",
+        "url": "https://www.reforge.com/blog",
+        "type": "Blog",
+        "description": "Deep-dive articles on growth, retention, product strategy, and experimentation from practitioners at top companies."
+      },
+      {
+        "name": "SQLBolt",
+        "url": "https://sqlbolt.com/",
+        "type": "Interactive Tutorial",
+        "description": "Learn SQL through hands-on exercises. PMs who can pull their own data don't wait on analysts. This gives you independence."
+      }
+    ]
+  },
+  {
+    "id": "cybersecurity",
+    "title": "Cybersecurity",
+    "colorTheme": "slate",
+    "description": "Cybersecurity professionals protect companies from hackers, data breaches, and digital threats. You're the shield between an organization's data and the people trying to steal it. Every company that uses technology (so, every company) needs security — and there aren't nearly enough people to fill the roles. The cybersecurity talent shortage is massive, which means high demand, strong salaries, and job security. If you're naturally curious, enjoy solving puzzles, and get a thrill from outsmarting bad actors, this career was made for you.",
+    "salaryRange": "$60,000 – $120,000",
+    "averageSalary": "$90,000",
+    "demandLevel": "Extremely High",
+    "timeToTransition": "4 – 8 months",
+    "whatYoullActuallyDo": [
+      "Monitor security alerts and investigate potential threats and breaches",
+      "Conduct vulnerability assessments — scan systems to find weaknesses before attackers do",
+      "Respond to security incidents: contain threats, investigate root causes, document findings",
+      "Implement security controls: firewalls, access management, encryption, endpoint protection",
+      "Write security policies and train employees on best practices (phishing awareness, password hygiene)",
+      "Perform risk assessments and recommend security improvements to leadership"
+    ],
+    "aiSkills": [
+      {
+        "name": "AI-Powered Threat Detection",
+        "description": "Use AI-enhanced security tools (SIEM platforms, EDR systems) that automatically detect anomalous behavior, flag suspicious activity, and reduce false positives. Let AI handle the noise so you focus on real threats."
+      },
+      {
+        "name": "Automated Log Analysis",
+        "description": "Feed massive security logs into AI to instantly identify patterns, correlations, and indicators of compromise. What took analysts hours of manual review now surfaces in seconds."
+      },
+      {
+        "name": "AI-Assisted Incident Response",
+        "description": "Use AI to quickly analyze malware samples, map attack vectors, and generate incident response playbooks. Faster response means less damage."
+      },
+      {
+        "name": "Vulnerability Report Generation",
+        "description": "Use AI to turn raw scan results into clear, prioritized vulnerability reports with remediation recommendations. Communicate risk to technical and non-technical audiences."
+      },
+      {
+        "name": "Phishing Detection & Analysis",
+        "description": "AI tools can analyze emails, URLs, and attachments at scale to identify phishing attempts. Train AI models to catch increasingly sophisticated social engineering attacks."
+      },
+      {
+        "name": "Security Policy Drafting",
+        "description": "Generate security policies, compliance documentation, and employee training materials with AI. Ensure your organization meets regulatory requirements (SOC 2, GDPR, HIPAA) faster."
+      }
+    ],
+    "transferableSkills": [
+      {
+        "name": "Investigative Mindset",
+        "from": "Law Enforcement, Journalism, Research, Auditing",
+        "description": "Security analysts are digital detectives. Your ability to follow leads, piece together evidence, and think like an adversary directly translates to threat hunting and incident investigation."
+      },
+      {
+        "name": "Attention to Detail",
+        "from": "Quality Assurance, Accounting, Legal, Healthcare",
+        "description": "A single misconfigured setting can expose an entire company. Your meticulous nature and habit of double-checking everything is exactly what security work demands."
+      },
+      {
+        "name": "Risk Assessment",
+        "from": "Insurance, Finance, Military, Compliance",
+        "description": "Cybersecurity is fundamentally about managing risk. If you've ever evaluated risk likelihood and impact, or created mitigation plans, you already think like a security professional."
+      },
+      {
+        "name": "Communication Under Pressure",
+        "from": "Emergency Services, Healthcare, Military, Customer Service",
+        "description": "When a breach happens, you need to stay calm, communicate clearly, and coordinate a response. Your experience working under pressure is invaluable in incident response."
+      },
+      {
+        "name": "Rule Following & Compliance",
+        "from": "Government, Legal, Healthcare, Banking",
+        "description": "Security is full of frameworks, regulations, and standards (NIST, ISO 27001, SOC 2). Your comfort with structured processes and compliance requirements gives you a head start."
+      }
+    ],
+    "roadmap": [
+      {
+        "phase": "Phase 1",
+        "title": "Build Your Foundation",
+        "timeframe": "Weeks 1 – 6",
+        "description": "Learn how computers and networks work. You can't secure what you don't understand.",
+        "steps": [
+          "Learn networking fundamentals: TCP/IP, DNS, HTTP/HTTPS, ports, firewalls (Professor Messer's free videos are excellent)",
+          "Understand operating systems: learn basic Linux commands (most security tools run on Linux)",
+          "Complete Google Cybersecurity Certificate on Coursera (free with trial)",
+          "Learn the CIA triad (Confidentiality, Integrity, Availability) — the foundation of all security",
+          "Set up a home lab: install VirtualBox, run a Linux VM, and practice basic command-line operations",
+          "Study common attack types: phishing, malware, ransomware, SQL injection, DDoS, social engineering"
+        ]
+      },
+      {
+        "phase": "Phase 2",
+        "title": "Get Certified & Go Deeper",
+        "timeframe": "Weeks 7 – 14",
+        "description": "Certifications matter more in cybersecurity than almost any other tech field. Start with the industry standard.",
+        "steps": [
+          "Study for CompTIA Security+ certification — the #1 entry-level security cert (employers love it)",
+          "Learn security tools: Wireshark (network analysis), Nmap (scanning), Burp Suite (web security)",
+          "Practice on TryHackMe or Hack The Box — hands-on labs that teach security through challenges",
+          "Study the NIST Cybersecurity Framework — the standard framework used by most organizations",
+          "Learn basic Python scripting for security automation (automating scans, parsing logs)",
+          "Understand identity and access management: authentication, authorization, MFA, SSO"
+        ]
+      },
+      {
+        "phase": "Phase 3",
+        "title": "Build Real Experience",
+        "timeframe": "Weeks 15 – 24",
+        "description": "Hands-on experience is everything in security. Build a portfolio that proves you can do the work.",
+        "steps": [
+          "Complete TryHackMe learning paths: SOC Analyst Level 1 or Cyber Defense path",
+          "Build a home security lab: set up a SIEM (Security Onion or Wazuh), monitor traffic, detect threats",
+          "Participate in Capture the Flag (CTF) competitions — great for learning and your resume",
+          "Document everything: write up your lab setup, CTF solutions, and security analyses",
+          "Contribute to open-source security projects on GitHub",
+          "Get your CompTIA Security+ certification (exam costs ~$400 but opens many doors)"
+        ]
+      },
+      {
+        "phase": "Phase 4",
+        "title": "Get Hired",
+        "timeframe": "Weeks 25 – 32",
+        "description": "The cybersecurity talent gap means companies are hungry for candidates. Position yourself right.",
+        "steps": [
+          "Apply for roles: 'SOC Analyst', 'Security Analyst', 'Information Security Analyst', 'IT Security Specialist'",
+          "Target companies with security apprenticeship programs: Cisco, IBM, Google",
+          "Apply to Cisco Cybersecurity Apprenticeship and IBM Apprenticeship programs",
+          "Join security communities: OWASP local chapter, DEF CON groups, r/cybersecurity",
+          "Practice security interview questions: incident response scenarios, network analysis, risk assessment",
+          "Network at security conferences: BSides (free/cheap), local ISSA chapters, virtual security meetups",
+          "Consider help desk or IT support roles as stepping stones — they build the technical foundation security teams value"
+        ]
+      }
+    ],
+    "freeResources": [
+      {
+        "name": "Google Cybersecurity Certificate",
+        "url": "https://www.coursera.org/professional-certificates/google-cybersecurity",
+        "type": "Certificate",
+        "description": "Google's comprehensive cybersecurity program. Covers security fundamentals, network security, Linux, SQL, and incident response. Free with Coursera trial."
+      },
+      {
+        "name": "TryHackMe",
+        "url": "https://tryhackme.com/",
+        "type": "Hands-on Labs",
+        "description": "Learn cybersecurity through interactive, gamified labs. Start with the 'Complete Beginner' path. Many rooms are free. The best way to learn security by doing."
+      },
+      {
+        "name": "Professor Messer (CompTIA Security+)",
+        "url": "https://www.professormesser.com/security-plus/sy0-701/sy0-701-video/sy0-701-comptia-security-702-course/",
+        "type": "Video Course",
+        "description": "Free, comprehensive video course covering everything on the CompTIA Security+ exam. Professor Messer is the gold standard for cert prep."
+      },
+      {
+        "name": "Hack The Box",
+        "url": "https://www.hackthebox.com/",
+        "type": "Practice Platform",
+        "description": "Hands-on cybersecurity training with real-world scenarios. Free tier includes practice machines and challenges. Great for building practical skills."
+      },
+      {
+        "name": "OWASP Web Security Testing Guide",
+        "url": "https://owasp.org/www-project-web-security-testing-guide/",
+        "type": "Reference",
+        "description": "The definitive guide to web application security testing. Free, open-source, and constantly updated. Essential knowledge for any security role."
+      },
+      {
+        "name": "Cybrary",
+        "url": "https://www.cybrary.it/",
+        "type": "Course Platform",
+        "description": "Free cybersecurity courses covering network security, ethical hacking, incident response, and more. Includes hands-on virtual labs."
+      }
+    ]
+  }
+]
