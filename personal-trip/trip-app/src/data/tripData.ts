@@ -4,6 +4,25 @@ export interface ContactInfo {
   address?: string;
 }
 
+export interface EmergencyContact {
+  name: string;
+  relationship: string;
+  phone: string;
+  email?: string;
+}
+
+export interface HealthProfile {
+  bloodType?: string;
+  allergies?: string[];
+  medications?: string[];
+  conditions?: string[];
+  insuranceProvider?: string;
+  insurancePolicyNumber?: string;
+  doctorName?: string;
+  doctorPhone?: string;
+  notes?: string;
+}
+
 export interface Traveler {
   id: string;
   name: string;
@@ -25,7 +44,130 @@ export interface Traveler {
   soloDays?: string;
   avatarInitials: string;
   emoji: string;
+  emergencyContact: EmergencyContact;
+  healthProfile: HealthProfile;
 }
+
+export interface Hospital {
+  name: string;
+  address: string;
+  phone: string;
+  erPhone?: string;
+  notes?: string;
+}
+
+export interface CityEmergencyInfo {
+  city: string;
+  flag: string;
+  police: string;
+  ambulance: string;
+  fire: string;
+  generalEmergency: string;
+  poisonControl?: string;
+  embassy: { name: string; phone: string; address: string };
+  hospitals: Hospital[];
+  tips: string[];
+}
+
+export const EMERGENCY_INFO: CityEmergencyInfo[] = [
+  {
+    city: 'London / United Kingdom',
+    flag: '🇬🇧',
+    police: '999',
+    ambulance: '999',
+    fire: '999',
+    generalEmergency: '999 (or 112)',
+    embassy: {
+      name: 'U.S. Embassy London',
+      phone: '+44-20-7499-9000',
+      address: '33 Nine Elms Ln, London SW11 7US, UK',
+    },
+    hospitals: [
+      {
+        name: "St Thomas' Hospital",
+        address: 'Westminster Bridge Rd, Lambeth, London SE1 7EH',
+        phone: '+44-20-7188-7188',
+        erPhone: '+44-20-7188-7188',
+        notes: 'Major A&E, right by Westminster Bridge — closest to most central London activities',
+      },
+      {
+        name: 'University College Hospital (UCH)',
+        address: '235 Euston Rd, Bloomsbury, London NW1 2BU',
+        phone: '+44-20-3456-7890',
+        erPhone: '+44-20-3447-9927',
+        notes: 'Major trauma center near King\'s Cross / Euston area',
+      },
+      {
+        name: 'Royal London Hospital',
+        address: 'Whitechapel Rd, London E1 1FR',
+        phone: '+44-20-7377-7000',
+        notes: 'Major trauma center — closest to Shoreditch / East London activities',
+      },
+      {
+        name: 'Chelsea and Westminster Hospital',
+        address: '369 Fulham Rd, Chelsea, London SW10 9NH',
+        phone: '+44-20-3315-8000',
+        notes: 'Walk-in A&E, near South Kensington museums & Notting Hill',
+      },
+    ],
+    tips: [
+      'NHS A&E (emergency rooms) are free for emergencies — no upfront payment required',
+      'For non-emergencies, call NHS 111 for medical advice 24/7',
+      'Pharmacies (Boots, Superdrug) can help with minor issues and are everywhere',
+      'Carry your travel insurance card and passport at all times',
+      'Tap water is safe to drink everywhere in London',
+    ],
+  },
+  {
+    city: 'Paris / France',
+    flag: '🇫🇷',
+    police: '17',
+    ambulance: '15 (SAMU)',
+    fire: '18 (Pompiers)',
+    generalEmergency: '112 (EU-wide)',
+    poisonControl: '+33-1-40-05-48-48',
+    embassy: {
+      name: 'U.S. Embassy Paris',
+      phone: '+33-1-43-12-22-22',
+      address: '2 Avenue Gabriel, 75008 Paris, France',
+    },
+    hospitals: [
+      {
+        name: 'Hôpital Hôtel-Dieu',
+        address: '1 Place du Parvis Notre-Dame, 75004 Paris',
+        phone: '+33-1-42-34-82-34',
+        notes: 'Oldest hospital in Paris — right next to Notre-Dame, central location',
+      },
+      {
+        name: 'Hôpital Européen Georges-Pompidou',
+        address: '20 Rue Leblanc, 75015 Paris',
+        phone: '+33-1-56-09-20-00',
+        notes: 'Modern hospital near Eiffel Tower area',
+      },
+      {
+        name: 'American Hospital of Paris',
+        address: '63 Boulevard Victor Hugo, 92200 Neuilly-sur-Seine',
+        phone: '+33-1-46-41-25-25',
+        erPhone: '+33-1-46-41-25-15',
+        notes: 'English-speaking staff, accepts most US insurance — slightly outside central Paris',
+      },
+      {
+        name: 'Hôpital Saint-Louis',
+        address: '1 Avenue Claude Vellefaux, 75010 Paris',
+        phone: '+33-1-42-49-49-49',
+        notes: 'Near Gare du Nord / Montmartre area',
+      },
+    ],
+    tips: [
+      'Call 15 (SAMU) for medical emergencies — dispatchers speak some English',
+      'French firefighters (Pompiers, 18) also respond to medical emergencies and are often faster',
+      '112 works from any phone (even locked) and connects to multilingual operators',
+      'Pharmacies (green cross sign) can diagnose minor issues and recommend treatment',
+      'Keep your European Health Insurance Card (EHIC) or travel insurance docs handy',
+      'The American Hospital of Paris has fully English-speaking staff if language is a barrier',
+    ],
+  },
+];
 
 export interface Activity {
   id: string;
@@ -73,6 +215,20 @@ export const TRAVELERS: Traveler[] = [
     totalDays: 5,
     avatarInitials: 'JC',
     emoji: '✈️',
+    emergencyContact: {
+      name: 'TBD — Update Before Trip',
+      relationship: 'TBD',
+      phone: 'TBD',
+    },
+    healthProfile: {
+      bloodType: 'TBD',
+      allergies: [],
+      medications: [],
+      conditions: [],
+      insuranceProvider: 'TBD — Update Before Trip',
+      insurancePolicyNumber: 'TBD',
+      notes: 'Please update with your real info before departure!',
+    },
   },
   {
     id: 'elias',
@@ -97,6 +253,20 @@ export const TRAVELERS: Traveler[] = [
     soloDays: 'Days 7–9: Camden, Museums, Greenwich',
     avatarInitials: 'ER',
     emoji: '🇺🇸',
+    emergencyContact: {
+      name: 'TBD — Update Before Trip',
+      relationship: 'TBD',
+      phone: 'TBD',
+    },
+    healthProfile: {
+      bloodType: 'TBD',
+      allergies: [],
+      medications: [],
+      conditions: [],
+      insuranceProvider: 'TBD — Update Before Trip',
+      insurancePolicyNumber: 'TBD',
+      notes: 'Please update with your real info before departure!',
+    },
   },
   {
     id: 'devonte',
@@ -121,6 +291,20 @@ export const TRAVELERS: Traveler[] = [
     totalDays: 8,
     avatarInitials: 'DW',
     emoji: '🇮🇸',
+    emergencyContact: {
+      name: 'TBD — Update Before Trip',
+      relationship: 'TBD',
+      phone: 'TBD',
+    },
+    healthProfile: {
+      bloodType: 'TBD',
+      allergies: [],
+      medications: [],
+      conditions: [],
+      insuranceProvider: 'TBD — Update Before Trip',
+      insurancePolicyNumber: 'TBD',
+      notes: 'Please update with your real info before departure!',
+    },
   },
   {
     id: 'jordan',
@@ -145,6 +329,20 @@ export const TRAVELERS: Traveler[] = [
     totalDays: 8,
     avatarInitials: 'JS',
     emoji: '🇮🇸',
+    emergencyContact: {
+      name: 'TBD — Update Before Trip',
+      relationship: 'TBD',
+      phone: 'TBD',
+    },
+    healthProfile: {
+      bloodType: 'TBD',
+      allergies: [],
+      medications: [],
+      conditions: [],
+      insuranceProvider: 'TBD — Update Before Trip',
+      insurancePolicyNumber: 'TBD',
+      notes: 'Please update with your real info before departure!',
+    },
   },
 ];
 

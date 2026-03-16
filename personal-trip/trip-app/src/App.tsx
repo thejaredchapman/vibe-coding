@@ -10,10 +10,11 @@ import FlightMap from './components/FlightMap';
 import PresenceTimeline from './components/PresenceTimeline';
 import DayDetail from './components/DayDetail';
 import LoginModal from './components/LoginModal';
+import EmergencyInfo from './components/EmergencyInfo';
 import { TRAVELERS, ITINERARY } from './data/tripData';
 import './App.css';
 
-type TabType = 'overview' | 'itinerary' | 'travelers';
+type TabType = 'overview' | 'itinerary' | 'travelers' | 'emergency';
 
 const AppContent: React.FC = () => {
   const { isAuthenticated, currentUser, logout } = useAuth();
@@ -26,6 +27,7 @@ const AppContent: React.FC = () => {
     { id: 'overview', label: 'Overview', icon: '🗺️' },
     { id: 'itinerary', label: 'Itinerary', icon: '📅' },
     { id: 'travelers', label: 'Travelers', icon: '✈️' },
+    { id: 'emergency', label: 'Emergency', icon: '🚨' },
   ];
 
   return (
@@ -305,6 +307,18 @@ const AppContent: React.FC = () => {
                   })}
                 </div>
               </div>
+            </motion.div>
+          )}
+
+          {activeTab === 'emergency' && (
+            <motion.div
+              key="emergency"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ type: 'spring', damping: 25 }}
+            >
+              <EmergencyInfo />
             </motion.div>
           )}
         </AnimatePresence>
