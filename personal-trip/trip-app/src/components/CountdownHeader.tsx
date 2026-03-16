@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useThemeColors } from '../hooks/useThemeColors';
 
-const TRIP_DATE = new Date('2025-05-18T00:00:00');
+const TRIP_DATE = new Date('2026-05-18T00:00:00');
 
 interface TimeLeft {
   days: number;

@@ -47,8 +47,8 @@ const AppContent: React.FC = () => {
           >
             <span className="logo-icon">🌍</span>
             <div>
-              <h1 className="logo-title">London & Paris 2025</h1>
-              <p className="logo-subtitle">May 18 – 26</p>
+              <h1 className="logo-title">London & Paris 2026</h1>
+              <p className="logo-subtitle">May 18 – 26, 2026</p>
             </div>
           </motion.div>
         </div>
