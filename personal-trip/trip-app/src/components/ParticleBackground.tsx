@@ -34,17 +34,17 @@ const ParticleBackground: React.FC = () => {
     window.addEventListener('resize', resize);
 
     // Init particles
-    const count = Math.min(80, Math.floor((window.innerWidth * window.innerHeight) / 15000));
+    const count = Math.min(120, Math.floor((window.innerWidth * window.innerHeight) / 10000));
     particlesRef.current = Array.from({ length: count }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      vx: (Math.random() - 0.5) * 0.4,
-      vy: (Math.random() - 0.5) * 0.4,
-      radius: Math.random() * 2 + 1,
+      vx: (Math.random() - 0.5) * 0.5,
+      vy: (Math.random() - 0.5) * 0.5,
+      radius: Math.random() * 3 + 1.5,
       color: COLORS[Math.floor(Math.random() * COLORS.length)],
-      alpha: Math.random() * 0.5 + 0.2,
+      alpha: Math.random() * 0.6 + 0.3,
       pulse: Math.random() * Math.PI * 2,
-      pulseSpeed: Math.random() * 0.02 + 0.005,
+      pulseSpeed: Math.random() * 0.025 + 0.008,
     }));
 
     const handleMouse = (e: MouseEvent) => {
@@ -98,13 +98,13 @@ const ParticleBackground: React.FC = () => {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 120) {
+          if (dist < 160) {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
             ctx.strokeStyle = particles[i].color;
-            ctx.globalAlpha = (1 - dist / 120) * 0.15;
-            ctx.lineWidth = 0.5;
+            ctx.globalAlpha = (1 - dist / 160) * 0.25;
+            ctx.lineWidth = 0.8;
             ctx.stroke();
           }
         }

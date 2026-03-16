@@ -12,10 +12,11 @@ import DayDetail from './components/DayDetail';
 import LoginModal from './components/LoginModal';
 import EmergencyInfo from './components/EmergencyInfo';
 import HorizontalTimeline from './components/HorizontalTimeline';
+import PackingList from './components/PackingList';
 import { TRAVELERS, ITINERARY } from './data/tripData';
 import './App.css';
 
-type TabType = 'overview' | 'itinerary' | 'travelers' | 'emergency';
+type TabType = 'overview' | 'itinerary' | 'travelers' | 'packing' | 'emergency';
 
 const AppContent: React.FC = () => {
   const { isAuthenticated, currentUser, logout } = useAuth();
@@ -29,6 +30,7 @@ const AppContent: React.FC = () => {
     { id: 'overview', label: 'Overview', icon: '🗺️' },
     { id: 'itinerary', label: 'Itinerary', icon: '📅' },
     { id: 'travelers', label: 'Travelers', icon: '✈️' },
+    { id: 'packing', label: 'Packing', icon: '🧳' },
     { id: 'emergency', label: 'Emergency', icon: '🚨' },
   ];
 
@@ -363,6 +365,18 @@ const AppContent: React.FC = () => {
                   })}
                 </div>
               </div>
+            </motion.div>
+          )}
+
+          {activeTab === 'packing' && (
+            <motion.div
+              key="packing"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ type: 'spring', damping: 25 }}
+            >
+              <PackingList />
             </motion.div>
           )}
 

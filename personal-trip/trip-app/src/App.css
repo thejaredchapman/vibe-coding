@@ -47,7 +47,7 @@
   --scrollbar-thumb: rgba(120, 90, 50, 0.15);
   --scrollbar-thumb-hover: rgba(120, 90, 50, 0.25);
   --avatar-border: #f5f0e8;
-  --particle-opacity: 0.3;
+  --particle-opacity: 0.5;
 }
 
 * {
