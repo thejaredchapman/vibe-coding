@@ -43,7 +43,7 @@ const FlightMap: React.FC = () => {
       <h3 style={{ color: c.textTertiary, fontSize: 12, textTransform: 'uppercase', letterSpacing: 2, margin: '0 0 12px' }}>
         Flight Routes
       </h3>
-      <svg viewBox="50 60 400 180" style={{ width: '100%', height: 'auto', maxHeight: 220 }}>
+      <svg viewBox="50 60 400 180" style={{ width: '100%', height: 'auto', maxHeight: 180 }}>
         {[80, 120, 160, 200].map((y) => (
           <line key={y} x1="50" y1={y} x2="450" y2={y} stroke={gridStroke} strokeWidth="0.5" />
         ))}
@@ -80,7 +80,7 @@ const FlightMap: React.FC = () => {
           </g>
         ))}
       </svg>
-      <div style={{ display: 'flex', gap: 16, justifyContent: 'center', flexWrap: 'wrap', marginTop: 8 }}>
+      <div style={{ display: 'flex', gap: 10, justifyContent: 'center', flexWrap: 'wrap', marginTop: 8 }}>
         {TRAVELERS.map((t) => (
           <div key={t.id} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
             <div style={{ width: 20, height: 2, background: t.color, borderRadius: 1 }} />

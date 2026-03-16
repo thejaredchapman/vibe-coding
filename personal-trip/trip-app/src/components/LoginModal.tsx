@@ -63,18 +63,18 @@ const LoginModal: React.FC<Props> = ({ isOpen, onClose }) => {
             onClick={(e) => e.stopPropagation()}
             style={{
               background: c.modalBg,
-              borderRadius: 24,
-              padding: '40px',
-              width: '90%',
-              maxWidth: 440,
+              borderRadius: 20,
+              padding: 'clamp(20px, 5vw, 40px)',
+              width: '92%',
+              maxWidth: 420,
               border: `1px solid ${c.border}`,
               boxShadow: c.modalShadow,
             }}
           >
-            <h2 style={{ color: c.text, margin: '0 0 8px', fontSize: 28, fontWeight: 700 }}>
+            <h2 style={{ color: c.text, margin: '0 0 8px', fontSize: 22, fontWeight: 700 }}>
               Welcome, Traveler
             </h2>
-            <p style={{ color: c.textTertiary, margin: '0 0 28px', fontSize: 14 }}>
+            <p style={{ color: c.textTertiary, margin: '0 0 20px', fontSize: 13 }}>
               Sign in with your name and airline confirmation code to edit the itinerary.
             </p>
 
@@ -155,7 +155,7 @@ const LoginModal: React.FC<Props> = ({ isOpen, onClose }) => {
                     border: `2px solid ${c.border}`,
                     borderRadius: 12,
                     color: c.text,
-                    fontSize: 18,
+                    fontSize: 16,
                     fontFamily: 'monospace',
                     letterSpacing: 4,
                     textAlign: 'center',

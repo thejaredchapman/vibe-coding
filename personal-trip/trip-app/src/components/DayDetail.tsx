@@ -63,15 +63,15 @@ const DayDetail: React.FC<Props> = ({ dayIndex }) => {
       <div
         style={{
           background: `linear-gradient(135deg, ${cityColor}15, transparent)`,
-          borderRadius: 24,
-          padding: '28px 24px 20px',
-          marginBottom: 20,
+          borderRadius: 20,
+          padding: '20px 16px 16px',
+          marginBottom: 16,
           border: `1px solid ${cityColor}20`,
           position: 'relative',
           overflow: 'hidden',
         }}
       >
-        <div style={{ position: 'absolute', top: -40, right: -20, fontSize: 120, opacity: 0.04, pointerEvents: 'none', lineHeight: 1 }}>
+        <div style={{ position: 'absolute', top: -40, right: -20, fontSize: 80, opacity: 0.04, pointerEvents: 'none', lineHeight: 1 }}>
           {cityFlag}
         </div>
 
@@ -84,7 +84,7 @@ const DayDetail: React.FC<Props> = ({ dayIndex }) => {
             >
               Day {day.day} {cityFlag}
             </motion.span>
-            <h2 style={{ color: c.text, margin: '0 0 4px', fontSize: 28, fontWeight: 800 }}>
+            <h2 style={{ color: c.text, margin: '0 0 4px', fontSize: 22, fontWeight: 800 }}>
               {day.subtitle}
             </h2>
             <p style={{ color: c.textTertiary, margin: 0, fontSize: 14 }}>
@@ -105,12 +105,12 @@ const DayDetail: React.FC<Props> = ({ dayIndex }) => {
                     transition={{ delay: i * 0.1 }}
                     title={t.name}
                     style={{
-                      width: 38, height: 38, borderRadius: '50%',
+                      width: 32, height: 32, borderRadius: '50%',
                       background: `linear-gradient(135deg, ${t.color}, ${t.colorLight})`,
                       display: 'flex', alignItems: 'center', justifyContent: 'center',
-                      color: '#fff', fontWeight: 700, fontSize: 12,
-                      border: `3px solid ${c.avatarBorder}`,
-                      marginLeft: i > 0 ? -10 : 0,
+                      color: '#fff', fontWeight: 700, fontSize: 10,
+                      border: `2px solid ${c.avatarBorder}`,
+                      marginLeft: i > 0 ? -8 : 0,
                       zIndex: presentTravelers.length - i,
                       boxShadow: `0 2px 8px ${t.color}40`,
                     }}
@@ -137,7 +137,7 @@ const DayDetail: React.FC<Props> = ({ dayIndex }) => {
                     value={accomValue}
                     onChange={(e) => setAccomValue(e.target.value)}
                     onKeyDown={(e) => { if (e.key === 'Enter') { updateAccommodation(dayIndex, accomValue); setEditingAccom(false); } }}
-                    style={{ background: c.bgInput, border: `1px solid ${c.borderInput}`, borderRadius: 6, padding: '4px 8px', color: c.text, fontSize: 12, outline: 'none', width: 160 }}
+                    style={{ background: c.bgInput, border: `1px solid ${c.borderInput}`, borderRadius: 6, padding: '4px 8px', color: c.text, fontSize: 12, outline: 'none', width: '100%', maxWidth: 200 }}
                     autoFocus
                   />
                   <button onClick={() => { updateAccommodation(dayIndex, accomValue); setEditingAccom(false); }} style={{ background: cityColor, border: 'none', borderRadius: 6, padding: '4px 10px', color: '#fff', fontSize: 11, cursor: 'pointer' }}>Save</button>
@@ -206,7 +206,7 @@ const DayDetail: React.FC<Props> = ({ dayIndex }) => {
       </div>
 
       {/* Activities List */}
-      <div style={{ background: c.bgCard, borderRadius: 20, padding: '8px 20px', border: `1px solid ${c.borderLight}` }}>
+      <div style={{ background: c.bgCard, borderRadius: 16, padding: '8px 14px', border: `1px solid ${c.borderLight}` }}>
         <AnimatePresence>
           {day.activities.map((activity, idx) => (
             <ActivityCard key={activity.id} activity={activity} index={idx} dayColor={cityColor} onUpdate={(updates) => updateActivity(dayIndex, activity.id, updates)} onRemove={() => removeActivity(dayIndex, activity.id)} />

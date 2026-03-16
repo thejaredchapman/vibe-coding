@@ -21,23 +21,24 @@ const HorizontalTimeline: React.FC = () => {
 
   const scroll = (dir: 'left' | 'right') => {
     if (scrollRef.current) {
-      scrollRef.current.scrollBy({ left: dir === 'left' ? -320 : 320, behavior: 'smooth' });
+      scrollRef.current.scrollBy({ left: dir === 'left' ? -260 : 260, behavior: 'smooth' });
     }
   };
 
   return (
     <div style={{ position: 'relative' }}>
-      {/* Scroll buttons */}
+      {/* Scroll buttons — hidden on small screens where swipe is natural */}
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => scroll('left')}
+        className="timeline-scroll-btn"
         style={{
-          position: 'absolute', left: -4, top: '50%', transform: 'translateY(-50%)', zIndex: 10,
-          width: 36, height: 36, borderRadius: '50%', border: `1px solid ${c.border}`,
+          position: 'absolute', left: 0, top: '50%', transform: 'translateY(-50%)', zIndex: 10,
+          width: 32, height: 32, borderRadius: '50%', border: `1px solid ${c.border}`,
           background: c.bgCard, backdropFilter: 'blur(10px)', cursor: 'pointer',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
-          color: c.textSecondary, fontSize: 16, boxShadow: `0 2px 12px rgba(0,0,0,0.2)`,
+          color: c.textSecondary, fontSize: 14, boxShadow: `0 2px 12px rgba(0,0,0,0.2)`,
         }}
       >
         ◀
@@ -46,12 +47,13 @@ const HorizontalTimeline: React.FC = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => scroll('right')}
+        className="timeline-scroll-btn"
         style={{
-          position: 'absolute', right: -4, top: '50%', transform: 'translateY(-50%)', zIndex: 10,
-          width: 36, height: 36, borderRadius: '50%', border: `1px solid ${c.border}`,
+          position: 'absolute', right: 0, top: '50%', transform: 'translateY(-50%)', zIndex: 10,
+          width: 32, height: 32, borderRadius: '50%', border: `1px solid ${c.border}`,
           background: c.bgCard, backdropFilter: 'blur(10px)', cursor: 'pointer',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
-          color: c.textSecondary, fontSize: 16, boxShadow: `0 2px 12px rgba(0,0,0,0.2)`,
+          color: c.textSecondary, fontSize: 14, boxShadow: `0 2px 12px rgba(0,0,0,0.2)`,
         }}
       >
         ▶
@@ -62,14 +64,16 @@ const HorizontalTimeline: React.FC = () => {
         ref={scrollRef}
         style={{
           overflowX: 'auto',
-          padding: '10px 20px 20px',
+          padding: '10px 12px 20px',
           scrollbarWidth: 'thin',
+          WebkitOverflowScrolling: 'touch',
+          scrollSnapType: 'x mandatory',
         }}
       >
         <div style={{ display: 'flex', gap: 0, minWidth: 'min-content', position: 'relative' }}>
           {/* Horizontal connector line */}
           <div style={{
-            position: 'absolute', top: 38, left: 20, right: 20, height: 3,
+            position: 'absolute', top: 34, left: 20, right: 20, height: 3,
             background: `linear-gradient(90deg, #e94560, #e94560 28%, #f4a261 28%, #f4a261 66%, #e94560 66%, #e94560)`,
             borderRadius: 2, opacity: 0.25, zIndex: 0,
           }} />
@@ -87,85 +91,86 @@ const HorizontalTimeline: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: idx * 0.08, type: 'spring', damping: 20 }}
                 style={{
-                  minWidth: 280,
-                  maxWidth: 300,
-                  padding: '0 8px',
+                  minWidth: 240,
+                  maxWidth: 280,
+                  padding: '0 6px',
                   position: 'relative',
                   zIndex: 1,
+                  scrollSnapAlign: 'start',
                 }}
               >
                 {/* Day node */}
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: 12 }}>
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: 10 }}>
                   <motion.div
                     whileHover={{ scale: 1.15 }}
                     style={{
-                      width: 56, height: 56, borderRadius: '50%',
+                      width: 48, height: 48, borderRadius: '50%',
                       background: `linear-gradient(135deg, ${cityColor}, ${cityColor}cc)`,
                       display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                      boxShadow: `0 4px 20px ${cityColor}40`,
+                      boxShadow: `0 4px 16px ${cityColor}40`,
                       border: `3px solid ${c.isDark ? '#1a1a2e' : '#f5f0e8'}`,
                       position: 'relative', zIndex: 2,
                     }}
                   >
-                    <span style={{ color: '#fff', fontSize: 11, fontWeight: 800, lineHeight: 1 }}>DAY</span>
-                    <span style={{ color: '#fff', fontSize: 18, fontWeight: 900, lineHeight: 1 }}>{day.day}</span>
+                    <span style={{ color: '#fff', fontSize: 9, fontWeight: 800, lineHeight: 1 }}>DAY</span>
+                    <span style={{ color: '#fff', fontSize: 16, fontWeight: 900, lineHeight: 1 }}>{day.day}</span>
                   </motion.div>
-                  <span style={{ color: c.textTertiary, fontSize: 11, fontWeight: 600, marginTop: 6 }}>
+                  <span style={{ color: c.textTertiary, fontSize: 10, fontWeight: 600, marginTop: 4 }}>
                     {day.dateShort}
                   </span>
-                  <span style={{ color: cityColor, fontSize: 10, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 0.5 }}>
+                  <span style={{ color: cityColor, fontSize: 9, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 0.5 }}>
                     {isTransit ? 'London → Paris' : day.city} {isParis ? '🇫🇷' : '🇬🇧'}
                   </span>
                 </div>
 
                 {/* Day card */}
                 <motion.div
-                  whileHover={{ y: -4 }}
+                  whileHover={{ y: -3 }}
                   style={{
                     background: c.bgCard,
                     border: `1px solid ${cityColor}25`,
-                    borderRadius: 18,
-                    padding: 16,
-                    minHeight: 240,
+                    borderRadius: 16,
+                    padding: 14,
+                    minHeight: 200,
                   }}
                 >
-                  <h4 style={{ color: c.text, margin: '0 0 8px', fontSize: 14, fontWeight: 700 }}>
+                  <h4 style={{ color: c.text, margin: '0 0 6px', fontSize: 13, fontWeight: 700 }}>
                     {day.subtitle}
                   </h4>
 
                   {/* Traveler avatars */}
-                  <div style={{ display: 'flex', marginBottom: 10 }}>
+                  <div style={{ display: 'flex', marginBottom: 8 }}>
                     {presentTravelers.map((t, i) => (
                       <div
                         key={t.id}
                         title={t.name}
                         style={{
-                          width: 26, height: 26, borderRadius: '50%',
+                          width: 22, height: 22, borderRadius: '50%',
                           background: `linear-gradient(135deg, ${t.color}, ${t.colorLight})`,
                           display: 'flex', alignItems: 'center', justifyContent: 'center',
-                          color: '#fff', fontWeight: 700, fontSize: 9,
+                          color: '#fff', fontWeight: 700, fontSize: 8,
                           border: `2px solid ${c.isDark ? '#1a1a2e' : '#f5f0e8'}`,
-                          marginLeft: i > 0 ? -6 : 0, zIndex: presentTravelers.length - i,
+                          marginLeft: i > 0 ? -5 : 0, zIndex: presentTravelers.length - i,
                         }}
                       >
                         {t.avatarInitials}
                       </div>
                     ))}
-                    <span style={{ color: c.textFaint, fontSize: 10, marginLeft: 6, alignSelf: 'center' }}>
+                    <span style={{ color: c.textFaint, fontSize: 9, marginLeft: 5, alignSelf: 'center' }}>
                       {presentTravelers.length}/4
                     </span>
                   </div>
 
                   {/* Accommodation */}
                   {day.accommodation && (
-                    <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 10, background: c.bgSubtle, borderRadius: 8, padding: '5px 10px' }}>
-                      <span style={{ fontSize: 12 }}>🏨</span>
-                      <span style={{ color: c.textTertiary, fontSize: 11 }}>{day.accommodation}</span>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 4, marginBottom: 8, background: c.bgSubtle, borderRadius: 6, padding: '4px 8px' }}>
+                      <span style={{ fontSize: 10 }}>🏨</span>
+                      <span style={{ color: c.textTertiary, fontSize: 10 }}>{day.accommodation}</span>
                     </div>
                   )}
 
                   {/* Activities */}
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
                     {day.activities.map((activity, ai) => {
                       const catColor = CATEGORY_COLORS[activity.category] || cityColor;
                       return (
@@ -175,24 +180,24 @@ const HorizontalTimeline: React.FC = () => {
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ delay: idx * 0.08 + ai * 0.03 }}
                           style={{
-                            display: 'flex', alignItems: 'flex-start', gap: 8,
-                            padding: '6px 0',
+                            display: 'flex', alignItems: 'flex-start', gap: 6,
+                            padding: '4px 0',
                             borderBottom: ai < day.activities.length - 1 ? `1px solid ${c.borderLight}` : 'none',
                           }}
                         >
                           <div style={{
-                            width: 7, height: 7, borderRadius: '50%', background: catColor,
-                            boxShadow: `0 0 6px ${catColor}40`, flexShrink: 0, marginTop: 5,
+                            width: 6, height: 6, borderRadius: '50%', background: catColor,
+                            boxShadow: `0 0 4px ${catColor}40`, flexShrink: 0, marginTop: 4,
                           }} />
                           <div style={{ flex: 1, minWidth: 0 }}>
-                            <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-                              <span style={{ fontSize: 14 }}>{activity.icon}</span>
-                              <span style={{ color: c.text, fontSize: 12, fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                            <div style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+                              <span style={{ fontSize: 12 }}>{activity.icon}</span>
+                              <span style={{ color: c.text, fontSize: 11, fontWeight: 600, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                                 {activity.title}
                               </span>
                             </div>
                             {activity.time && (
-                              <span style={{ color: catColor, fontSize: 10, fontWeight: 600, fontFamily: 'monospace' }}>
+                              <span style={{ color: catColor, fontSize: 9, fontWeight: 600, fontFamily: 'monospace' }}>
                                 {activity.time}
                               </span>
                             )}
@@ -204,8 +209,8 @@ const HorizontalTimeline: React.FC = () => {
 
                   {/* Notes */}
                   {day.notes && (
-                    <div style={{ marginTop: 8, background: 'rgba(243,156,18,0.08)', borderRadius: 8, padding: '6px 10px' }}>
-                      <p style={{ color: '#f39c12', fontSize: 10, margin: 0, fontStyle: 'italic' }}>{day.notes}</p>
+                    <div style={{ marginTop: 6, background: 'rgba(243,156,18,0.08)', borderRadius: 6, padding: '4px 8px' }}>
+                      <p style={{ color: '#f39c12', fontSize: 9, margin: 0, fontStyle: 'italic' }}>{day.notes}</p>
                     </div>
                   )}
                 </motion.div>

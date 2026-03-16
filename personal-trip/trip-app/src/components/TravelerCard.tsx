@@ -52,12 +52,12 @@ const TravelerCard: React.FC<Props> = ({ traveler, index }) => {
               }}
             />
 
-            <div style={{ display: 'flex', alignItems: 'center', gap: 14, marginBottom: 16 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 14 }}>
               <motion.div
                 whileHover={{ scale: 1.1, rotate: 5 }}
                 style={{
-                  width: 52,
-                  height: 52,
+                  width: 44,
+                  height: 44,
                   borderRadius: '50%',
                   background: `linear-gradient(135deg, ${traveler.color}, ${traveler.colorLight})`,
                   display: 'flex',
@@ -65,14 +65,14 @@ const TravelerCard: React.FC<Props> = ({ traveler, index }) => {
                   justifyContent: 'center',
                   color: '#fff',
                   fontWeight: 800,
-                  fontSize: 18,
+                  fontSize: 15,
                   boxShadow: `0 4px 20px ${traveler.color}40`,
                 }}
               >
                 {traveler.avatarInitials}
               </motion.div>
               <div>
-                <h3 style={{ color: c.text, margin: 0, fontSize: 17, fontWeight: 700 }}>{traveler.name}</h3>
+                <h3 style={{ color: c.text, margin: 0, fontSize: 15, fontWeight: 700 }}>{traveler.name}</h3>
                 <p style={{ color: c.textTertiary, margin: '2px 0 0', fontSize: 12 }}>
                   {traveler.airline} {traveler.emoji}
                 </p>

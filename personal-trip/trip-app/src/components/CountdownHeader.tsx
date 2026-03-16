@@ -44,7 +44,7 @@ const CountdownHeader: React.FC = () => {
   ];
 
   return (
-    <div style={{ textAlign: 'center', padding: '20px 0 10px' }}>
+    <div className="countdown-wrapper" style={{ textAlign: 'center', padding: '16px 0 10px' }}>
       {isTripTime ? (
         <motion.div
           initial={{ scale: 0 }}
@@ -61,22 +61,23 @@ const CountdownHeader: React.FC = () => {
         </motion.div>
       ) : (
         <>
-          <p style={{ color: c.textLabel, fontSize: 11, textTransform: 'uppercase', letterSpacing: 3, margin: '0 0 12px' }}>
+          <p style={{ color: c.textLabel, fontSize: 11, textTransform: 'uppercase', letterSpacing: 3, margin: '0 0 10px' }}>
             Countdown to takeoff
           </p>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: 12 }}>
+          <div className="countdown-units" style={{ display: 'flex', justifyContent: 'center', gap: 8 }}>
             {units.map((u, i) => (
               <motion.div
                 key={u.label}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
+                className="countdown-unit"
                 style={{
                   background: c.bgSubtle,
                   border: `1px solid ${c.borderLight}`,
-                  borderRadius: 14,
-                  padding: '12px 16px',
-                  minWidth: 64,
+                  borderRadius: 12,
+                  padding: '10px 12px',
+                  minWidth: 56,
                 }}
               >
                 <motion.span
@@ -85,7 +86,7 @@ const CountdownHeader: React.FC = () => {
                   animate={{ y: 0, opacity: 1 }}
                   style={{
                     display: 'block',
-                    fontSize: 28,
+                    fontSize: 24,
                     fontWeight: 800,
                     color: c.text,
                     fontFamily: 'monospace',
@@ -93,7 +94,7 @@ const CountdownHeader: React.FC = () => {
                 >
                   {String(u.value).padStart(2, '0')}
                 </motion.span>
-                <span style={{ color: c.textFaint, fontSize: 10, textTransform: 'uppercase', letterSpacing: 1 }}>
+                <span style={{ color: c.textFaint, fontSize: 9, textTransform: 'uppercase', letterSpacing: 1 }}>
                   {u.label}
                 </span>
               </motion.div>

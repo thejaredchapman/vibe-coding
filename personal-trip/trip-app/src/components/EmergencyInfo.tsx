@@ -41,7 +41,7 @@ const EmergencyInfo: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.15 }}
-        style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: 10, marginBottom: 32 }}
+        style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))', gap: 8, marginBottom: 28 }}
       >
         {[
           { label: 'EU Emergency', number: '112', color: '#e94560', icon: '🆘' },
@@ -143,7 +143,7 @@ const EmergencyInfo: React.FC = () => {
                 >
                   <div style={{ padding: '0 20px 20px' }}>
                     {/* Emergency Numbers Grid */}
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(130px, 1fr))', gap: 8, marginBottom: 16 }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(100px, 1fr))', gap: 6, marginBottom: 14 }}>
                       {[
                         { label: 'Police', number: city.police, color: '#2b5797' },
                         { label: 'Ambulance', number: city.ambulance, color: '#e94560' },
