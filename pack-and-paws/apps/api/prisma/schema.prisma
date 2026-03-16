@@ -1,0 +1,362 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextSearch"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── City & Venues ────────────────────────────────────────────────
+
+model City {
+  id                  String   @id @default(cuid())
+  name                String
+  state               String
+  region              String
+  lat                 Float
+  lng                 Float
+  dogFriendlinessScore Int     @default(5)
+  description         String
+  heroImage           String   @default("")
+  climate             String   @default("")
+  population          Int      @default(0)
+  createdAt           DateTime @default(now())
+
+  hotels      Hotel[]
+  restaurants Restaurant[]
+  cafes       Cafe[]
+  dogParks    DogPark[]
+  nationalParks CityNationalPark[]
+  routeCities RouteCityJunction[]
+  itineraries Itinerary[]
+
+  @@map("cities")
+}
+
+model Hotel {
+  id          String   @id @default(cuid())
+  cityId      String
+  name        String
+  address     String
+  lat         Float
+  lng         Float
+  priceRange  String   @default("$$") // $, $$, $$$, $$$$
+  dogPolicy   String
+  maxDogWeight Int     @default(0) // 0 = no limit
+  petFee      Float    @default(0)
+  amenities   String[] @default([])
+  rating      Float    @default(4.0)
+  imageUrl    String   @default("")
+  website     String   @default("")
+  phone       String   @default("")
+  createdAt   DateTime @default(now())
+
+  city       City        @relation(fields: [cityId], references: [id], onDelete: Cascade)
+  savedBy    SavedHotel[]
+  itineraries Itinerary[]
+
+  @@map("hotels")
+}
+
+model NationalPark {
+  id           String   @id @default(cuid())
+  name         String
+  state        String
+  lat          Float
+  lng          Float
+  dogPolicy    String
+  dogTrails    String[] @default([])
+  restrictions String[] @default([])
+  description  String
+  imageUrl     String   @default("")
+  website      String   @default("")
+  createdAt    DateTime @default(now())
+
+  cities CityNationalPark[]
+
+  @@map("national_parks")
+}
+
+model CityNationalPark {
+  cityId         String
+  nationalParkId String
+
+  city         City         @relation(fields: [cityId], references: [id], onDelete: Cascade)
+  nationalPark NationalPark @relation(fields: [nationalParkId], references: [id], onDelete: Cascade)
+
+  @@id([cityId, nationalParkId])
+  @@map("city_national_parks")
+}
+
+model Restaurant {
+  id             String   @id @default(cuid())
+  cityId         String
+  name           String
+  address        String
+  lat            Float
+  lng            Float
+  cuisine        String
+  priceRange     String   @default("$$")
+  dogPolicy      String
+  hasDogMenu     Boolean  @default(false)
+  outdoorSeating Boolean  @default(true)
+  waterBowls     Boolean  @default(true)
+  rating         Float    @default(4.0)
+  imageUrl       String   @default("")
+  website        String   @default("")
+  createdAt      DateTime @default(now())
+
+  city City @relation(fields: [cityId], references: [id], onDelete: Cascade)
+
+  @@map("restaurants")
+}
+
+model Cafe {
+  id             String   @id @default(cuid())
+  cityId         String
+  name           String
+  address        String
+  lat            Float
+  lng            Float
+  dogPolicy      String
+  hasOutdoorPatio Boolean @default(true)
+  dogTreats      Boolean  @default(false)
+  rating         Float    @default(4.0)
+  imageUrl       String   @default("")
+  website        String   @default("")
+  createdAt      DateTime @default(now())
+
+  city City @relation(fields: [cityId], references: [id], onDelete: Cascade)
+
+  @@map("cafes")
+}
+
+model DogPark {
+  id          String   @id @default(cuid())
+  cityId      String
+  name        String
+  address     String
+  lat         Float
+  lng         Float
+  offLeash    Boolean  @default(true)
+  fenced      Boolean  @default(true)
+  acres       Float    @default(1.0)
+  amenities   String[] @default([])
+  rating      Float    @default(4.0)
+  imageUrl    String   @default("")
+  description String   @default("")
+  createdAt   DateTime @default(now())
+
+  city City @relation(fields: [cityId], references: [id], onDelete: Cascade)
+
+  @@map("dog_parks")
+}
+
+// ─── Travel Routes ────────────────────────────────────────────────
+
+model TravelRoute {
+  id            String   @id @default(cuid())
+  name          String
+  description   String
+  totalMiles    Int
+  estimatedDays Int
+  difficulty    String   @default("moderate") // easy, moderate, challenging
+  imageUrl      String   @default("")
+  highlights    String[] @default([])
+  createdAt     DateTime @default(now())
+
+  waypoints   Waypoint[]
+  routeCities RouteCityJunction[]
+  trips       Trip[]
+
+  @@map("travel_routes")
+}
+
+model Waypoint {
+  id                String   @id @default(cuid())
+  routeId           String
+  name              String
+  lat               Float
+  lng               Float
+  dayNumber         Int
+  driveTimeFromPrev Int      @default(0) // minutes
+  description       String   @default("")
+  nearbyDogStops    String[] @default([])
+  overnightCityId   String?
+  createdAt         DateTime @default(now())
+
+  route TravelRoute @relation(fields: [routeId], references: [id], onDelete: Cascade)
+
+  @@map("waypoints")
+}
+
+model RouteCityJunction {
+  routeId    String
+  cityId     String
+  orderIndex Int @default(0)
+
+  route TravelRoute @relation(fields: [routeId], references: [id], onDelete: Cascade)
+  city  City        @relation(fields: [cityId], references: [id], onDelete: Cascade)
+
+  @@id([routeId, cityId])
+  @@map("route_city_junctions")
+}
+
+// ─── Users & Household ────────────────────────────────────────────
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  name         String
+  avatarUrl    String?
+  householdId  String?
+  createdAt    DateTime @default(now())
+
+  household   Household?   @relation(fields: [householdId], references: [id])
+  tripMembers TripMember[]
+  expenses    Expense[]
+  savedHotels SavedHotel[]
+
+  @@map("users")
+}
+
+model Household {
+  id        String   @id @default(cuid())
+  name      String
+  createdAt DateTime @default(now())
+
+  members User[]
+  dogs    Dog[]
+  trips   Trip[]
+
+  @@map("households")
+}
+
+model Dog {
+  id           String   @id @default(cuid())
+  householdId  String
+  name         String
+  breed        String
+  weight       Float
+  age          Int
+  temperament  String   @default("")
+  specialNeeds String?
+  imageUrl     String?
+  createdAt    DateTime @default(now())
+
+  household Household    @relation(fields: [householdId], references: [id], onDelete: Cascade)
+  documents DogDocument[]
+
+  @@map("dogs")
+}
+
+model DogDocument {
+  id        String   @id @default(cuid())
+  dogId     String
+  type      String   // vaccine, health_cert, registration, other
+  name      String
+  fileUrl   String
+  expiresAt DateTime?
+  createdAt DateTime @default(now())
+
+  dog Dog @relation(fields: [dogId], references: [id], onDelete: Cascade)
+
+  @@map("dog_documents")
+}
+
+// ─── Trips & Planning ─────────────────────────────────────────────
+
+model Trip {
+  id          String   @id @default(cuid())
+  householdId String
+  name        String
+  startDate   DateTime
+  endDate     DateTime
+  routeId     String?
+  status      String   @default("planning") // planning, active, completed, cancelled
+  createdAt   DateTime @default(now())
+
+  household   Household    @relation(fields: [householdId], references: [id], onDelete: Cascade)
+  route       TravelRoute? @relation(fields: [routeId], references: [id])
+  members     TripMember[]
+  itineraries Itinerary[]
+  expenses    Expense[]
+  packingList PackingList[]
+
+  @@map("trips")
+}
+
+model TripMember {
+  id     String @id @default(cuid())
+  tripId String
+  userId String
+  role   String @default("member") // organizer, member
+
+  trip Trip @relation(fields: [tripId], references: [id], onDelete: Cascade)
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([tripId, userId])
+  @@map("trip_members")
+}
+
+model Itinerary {
+  id         String   @id @default(cuid())
+  tripId     String
+  dayNumber  Int
+  cityId     String
+  hotelId    String?
+  activities String[] @default([])
+  notes      String   @default("")
+  createdAt  DateTime @default(now())
+
+  trip  Trip   @relation(fields: [tripId], references: [id], onDelete: Cascade)
+  city  City   @relation(fields: [cityId], references: [id])
+  hotel Hotel? @relation(fields: [hotelId], references: [id])
+
+  @@map("itineraries")
+}
+
+model Expense {
+  id          String   @id @default(cuid())
+  tripId      String
+  category    String   // lodging, food, gas, activities, pet, other
+  amount      Float
+  currency    String   @default("USD")
+  description String
+  paidById    String
+  createdAt   DateTime @default(now())
+
+  trip   Trip @relation(fields: [tripId], references: [id], onDelete: Cascade)
+  paidBy User @relation(fields: [paidById], references: [id])
+
+  @@map("expenses")
+}
+
+model PackingList {
+  id       String  @id @default(cuid())
+  tripId   String
+  item     String
+  category String  // clothing, toiletries, electronics, dog_essentials, dog_food, documents, other
+  packed   Boolean @default(false)
+  forDog   Boolean @default(false)
+
+  trip Trip @relation(fields: [tripId], references: [id], onDelete: Cascade)
+
+  @@map("packing_lists")
+}
+
+model SavedHotel {
+  id      String   @id @default(cuid())
+  userId  String
+  hotelId String
+  savedAt DateTime @default(now())
+
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  hotel Hotel @relation(fields: [hotelId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, hotelId])
+  @@map("saved_hotels")
+}
