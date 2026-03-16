@@ -205,14 +205,14 @@ export const TRAVELERS: Traveler[] = [
     },
     confirmationCode: 'CSOUCC',
     routeOut: 'LAX → LIS (layover) → LGW',
-    routeReturn: 'LHR → LIS → LAX',
+    routeReturn: 'LGW → OPO (22h 50m layover) → LIS (15h 45m layover) → LAX',
     arrivalAirport: 'Gatwick (LGW)',
     arrivalTime: '9:45 AM',
     arrivalDate: 'May 19, 2026',
-    departureDate: 'May 23, 2026 (Day 6)',
-    departureDetails: 'LHR → LIS → LAX',
-    presentDays: [2, 3, 4, 5, 6],
-    totalDays: 5,
+    departureDate: 'May 26, 2026 (Day 9)',
+    departureDetails: 'LGW 9:15 PM → OPO (TP1331) → LIS (TP1935) → LAX 7:30 PM May 28 (TP249)',
+    presentDays: [2, 3, 4, 5, 6, 7, 8, 9],
+    totalDays: 8,
     avatarInitials: 'JC',
     emoji: '✈️',
     emergencyContact: {
@@ -250,7 +250,7 @@ export const TRAVELERS: Traveler[] = [
     departureDetails: 'LHR → ORD, 12:15 PM',
     presentDays: [2, 3, 4, 5, 6, 7, 8, 9],
     totalDays: 8,
-    soloDays: 'Days 7–9: Camden, Museums, Greenwich',
+    soloDays: 'Days 7–9: Camden, Museums, Greenwich (all 4 travelers)',
     avatarInitials: 'ER',
     emoji: '🇺🇸',
     emergencyContact: {
@@ -515,10 +515,9 @@ export const ITINERARY: DayPlan[] = [
     date: 'Saturday, May 23, 2026',
     dateShort: 'May 23',
     city: 'Paris',
-    subtitle: 'Last Day & Departure',
+    subtitle: 'Last Paris Day & Farewell',
     travelerIds: ['jared', 'elias', 'devonte', 'jordan'],
     accommodation: 'Transit',
-    notes: 'Jared departs this day — LHR → LIS → LAX',
     activities: [
       {
         id: 'a6-1', time: '8:00 AM', title: 'Rue Cler Breakfast', description: 'Parisian street breakfast', icon: '🥐', category: 'food',
@@ -543,8 +542,8 @@ export const ITINERARY: DayPlan[] = [
     date: 'Sunday, May 24, 2026',
     dateShort: 'May 24',
     city: 'London',
-    subtitle: 'Solo: Camden & South Bank',
-    travelerIds: ['elias', 'devonte', 'jordan'],
+    subtitle: 'Camden & South Bank',
+    travelerIds: ['jared', 'elias', 'devonte', 'jordan'],
     accommodation: 'London Hotel (TBD)',
     activities: [
       {
@@ -570,8 +569,8 @@ export const ITINERARY: DayPlan[] = [
     date: 'Monday, May 25, 2026',
     dateShort: 'May 25',
     city: 'London',
-    subtitle: 'Solo: Museums & Notting Hill',
-    travelerIds: ['elias', 'devonte', 'jordan'],
+    subtitle: 'Museums & Notting Hill',
+    travelerIds: ['jared', 'elias', 'devonte', 'jordan'],
     accommodation: 'London Hotel (TBD)',
     activities: [
       {
@@ -597,10 +596,10 @@ export const ITINERARY: DayPlan[] = [
     date: 'Tuesday, May 26, 2026',
     dateShort: 'May 26',
     city: 'London',
-    subtitle: 'Solo: Greenwich & Departure',
-    travelerIds: ['elias', 'devonte', 'jordan'],
+    subtitle: 'Greenwich & Departure',
+    travelerIds: ['jared', 'elias', 'devonte', 'jordan'],
     accommodation: 'Departure Day',
-    notes: 'All remaining travelers depart — Elias 12:15 PM LHR, Devonte & Jordan 1:00 PM LGW',
+    notes: 'All travelers depart — Elias 12:15 PM LHR, Devonte & Jordan 1:00 PM LGW, Jared 9:15 PM LGW',
     activities: [
       {
         id: 'a9-1', time: '9:00 AM', title: 'Cutty Sark & Royal Observatory', description: 'Maritime history & Prime Meridian', icon: '🔭', category: 'culture',
