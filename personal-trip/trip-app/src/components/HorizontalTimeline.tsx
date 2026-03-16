@@ -4,7 +4,7 @@ import { TRAVELERS, Activity } from '../data/tripData';
 import { useTrip } from '../context/TripContext';
 import { useAuth } from '../context/AuthContext';
 import { useThemeColors } from '../hooks/useThemeColors';
-import ActivityCard from './ActivityCard';
+// ActivityCard available for future use
 
 const CATEGORY_COLORS: Record<string, string> = {
   sightseeing: '#e94560',
@@ -60,7 +60,7 @@ function formatHour(h: number): string {
 }
 
 const HorizontalTimeline: React.FC = () => {
-  const { days, updateActivity, removeActivity, addActivity, updateAccommodation, updateNotes } = useTrip();
+  const { days, removeActivity, addActivity, updateAccommodation, updateNotes } = useTrip();
   const { canEdit } = useAuth();
   const c = useThemeColors();
   const scrollRef = useRef<HTMLDivElement>(null);
@@ -475,7 +475,6 @@ const HorizontalTimeline: React.FC = () => {
                     return parsed !== null && Math.floor(parsed) === hour;
                   });
                   const hasActivity = activitiesAtHour.length > 0;
-                  const isNow = false; // Could add live time indicator later
 
                   return (
                     <div
