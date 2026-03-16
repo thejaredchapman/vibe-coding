@@ -11,6 +11,7 @@ import PresenceTimeline from './components/PresenceTimeline';
 import DayDetail from './components/DayDetail';
 import LoginModal from './components/LoginModal';
 import EmergencyInfo from './components/EmergencyInfo';
+import HorizontalTimeline from './components/HorizontalTimeline';
 import { TRAVELERS, ITINERARY } from './data/tripData';
 import './App.css';
 
@@ -22,6 +23,7 @@ const AppContent: React.FC = () => {
   const [activeTab, setActiveTab] = useState<TabType>('overview');
   const [selectedDay, setSelectedDay] = useState(1);
   const [showLogin, setShowLogin] = useState(false);
+  const [timelineView, setTimelineView] = useState<'detail' | 'horizontal'>('detail');
 
   const tabs: { id: TabType; label: string; icon: string }[] = [
     { id: 'overview', label: 'Overview', icon: '🗺️' },
@@ -116,7 +118,7 @@ const AppContent: React.FC = () => {
       </motion.nav>
 
       {/* Main Content */}
-      <main className="main-content">
+      <main className={`main-content${activeTab === 'itinerary' && timelineView === 'horizontal' ? ' wide' : ''}`}>
         <AnimatePresence mode="wait">
           {activeTab === 'overview' && (
             <motion.div
@@ -242,8 +244,62 @@ const AppContent: React.FC = () => {
               exit={{ opacity: 0, y: -20 }}
               transition={{ type: 'spring', damping: 25 }}
             >
-              <PresenceTimeline selectedDay={selectedDay} onDaySelect={setSelectedDay} />
-              <DayDetail dayIndex={selectedDay} />
+              {/* View Toggle */}
+              <div style={{ display: 'flex', justifyContent: 'center', marginBottom: 16 }}>
+                <div className="nav-tabs" style={{ display: 'inline-flex' }}>
+                  <motion.button
+                    className={`nav-tab ${timelineView === 'detail' ? 'active' : ''}`}
+                    onClick={() => setTimelineView('detail')}
+                    whileHover={{ y: -1 }}
+                    whileTap={{ scale: 0.95 }}
+                    style={{ padding: '6px 16px', fontSize: 12 }}
+                  >
+                    <span className="tab-icon" style={{ fontSize: 13 }}>📋</span>
+                    <span className="tab-label">Day Detail</span>
+                    {timelineView === 'detail' && (
+                      <motion.div className="tab-indicator" layoutId="view-toggle" />
+                    )}
+                  </motion.button>
+                  <motion.button
+                    className={`nav-tab ${timelineView === 'horizontal' ? 'active' : ''}`}
+                    onClick={() => setTimelineView('horizontal')}
+                    whileHover={{ y: -1 }}
+                    whileTap={{ scale: 0.95 }}
+                    style={{ padding: '6px 16px', fontSize: 12 }}
+                  >
+                    <span className="tab-icon" style={{ fontSize: 13 }}>🗓️</span>
+                    <span className="tab-label">Timeline</span>
+                    {timelineView === 'horizontal' && (
+                      <motion.div className="tab-indicator" layoutId="view-toggle" />
+                    )}
+                  </motion.button>
+                </div>
+              </div>
+
+              <AnimatePresence mode="wait">
+                {timelineView === 'detail' ? (
+                  <motion.div
+                    key="detail-view"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: 20 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <PresenceTimeline selectedDay={selectedDay} onDaySelect={setSelectedDay} />
+                    <DayDetail dayIndex={selectedDay} />
+                  </motion.div>
+                ) : (
+                  <motion.div
+                    key="horizontal-view"
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <HorizontalTimeline />
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </motion.div>
           )}
 

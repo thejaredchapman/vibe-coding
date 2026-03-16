@@ -247,6 +247,13 @@ body {
   padding: 32px 24px 80px;
   position: relative;
   z-index: 1;
+  transition: max-width 0.3s ease;
+}
+
+.main-content.wide {
+  max-width: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 /* ---- Hero Section ---- */
