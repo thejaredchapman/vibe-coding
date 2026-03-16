@@ -160,6 +160,23 @@ const TravelerCard: React.FC<Props> = ({ traveler, index }) => {
                   <p style={{ color: c.text, fontSize: 13, margin: '4px 0 0' }}>{traveler.soloDays}</p>
                 </div>
               )}
+              {traveler.airlineContact && (
+                <div style={{ marginTop: 4, paddingTop: 10, borderTop: `1px solid ${traveler.color}30` }}>
+                  <p style={{ color: c.textLabel, fontSize: 10, textTransform: 'uppercase', margin: '0 0 6px' }}>Airline Contact</p>
+                  <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                    {traveler.airlineContact.phone && (
+                      <a href={`tel:${traveler.airlineContact.phone}`} onClick={(e) => e.stopPropagation()} style={{ display: 'inline-flex', alignItems: 'center', gap: 4, background: `${traveler.color}20`, border: `1px solid ${traveler.color}35`, borderRadius: 8, padding: '4px 10px', color: traveler.colorLight, fontSize: 11, fontWeight: 500, textDecoration: 'none' }}>
+                        📞 {traveler.airlineContact.phone}
+                      </a>
+                    )}
+                    {traveler.airlineContact.url && (
+                      <a href={traveler.airlineContact.url} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} style={{ display: 'inline-flex', alignItems: 'center', gap: 4, background: `${traveler.color}20`, border: `1px solid ${traveler.color}35`, borderRadius: 8, padding: '4px 10px', color: traveler.colorLight, fontSize: 11, fontWeight: 500, textDecoration: 'none' }}>
+                        🔗 Website
+                      </a>
+                    )}
+                  </div>
+                </div>
+              )}
             </div>
 
             <p style={{ color: c.textFaint, fontSize: 10, textAlign: 'center', marginTop: 14, marginBottom: 0 }}>

@@ -84,6 +84,26 @@ const ActivityCard: React.FC<Props> = ({ activity, index, onUpdate, onRemove, da
                 </p>
               )}
 
+              {activity.contact && (
+                <div style={{ margin: '6px 0 0 28px', display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                  {activity.contact.phone && (
+                    <a href={`tel:${activity.contact.phone}`} onClick={(e) => e.stopPropagation()} style={{ display: 'inline-flex', alignItems: 'center', gap: 4, background: `${categoryColor}10`, border: `1px solid ${categoryColor}25`, borderRadius: 8, padding: '3px 10px', color: categoryColor, fontSize: 11, fontWeight: 500, textDecoration: 'none', transition: 'background 0.2s' }}>
+                      <span style={{ fontSize: 12 }}>📞</span> {activity.contact.phone}
+                    </a>
+                  )}
+                  {activity.contact.url && (
+                    <a href={activity.contact.url} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} style={{ display: 'inline-flex', alignItems: 'center', gap: 4, background: `${categoryColor}10`, border: `1px solid ${categoryColor}25`, borderRadius: 8, padding: '3px 10px', color: categoryColor, fontSize: 11, fontWeight: 500, textDecoration: 'none', transition: 'background 0.2s' }}>
+                      <span style={{ fontSize: 12 }}>🔗</span> Website
+                    </a>
+                  )}
+                  {activity.contact.address && (
+                    <a href={`https://maps.google.com/?q=${encodeURIComponent(activity.contact.address)}`} target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()} style={{ display: 'inline-flex', alignItems: 'center', gap: 4, background: `${categoryColor}10`, border: `1px solid ${categoryColor}25`, borderRadius: 8, padding: '3px 10px', color: categoryColor, fontSize: 11, fontWeight: 500, textDecoration: 'none', transition: 'background 0.2s' }}>
+                      <span style={{ fontSize: 12 }}>📍</span> {activity.contact.address}
+                    </a>
+                  )}
+                </div>
+              )}
+
               {canEdit && (
                 <div style={{ display: 'flex', gap: 8, marginTop: 8, marginLeft: 28 }}>
                   <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => setIsEditing(true)} style={{ background: c.bgHover, border: `1px solid ${c.border}`, borderRadius: 8, padding: '4px 12px', color: c.textTertiary, fontSize: 11, cursor: 'pointer' }}>

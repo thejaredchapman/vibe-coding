@@ -148,6 +148,25 @@ const DayDetail: React.FC<Props> = ({ dayIndex }) => {
                   {canEdit && <span style={{ color: c.textFaint, marginLeft: 6, fontSize: 10 }}>click to edit</span>}
                 </span>
               )}
+              {day.accommodationContact && (
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginTop: 6, marginLeft: 24 }}>
+                  {day.accommodationContact.phone && (
+                    <a href={`tel:${day.accommodationContact.phone}`} style={{ display: 'inline-flex', alignItems: 'center', gap: 4, background: `${cityColor}10`, border: `1px solid ${cityColor}25`, borderRadius: 8, padding: '3px 10px', color: cityColor, fontSize: 11, fontWeight: 500, textDecoration: 'none' }}>
+                      📞 {day.accommodationContact.phone}
+                    </a>
+                  )}
+                  {day.accommodationContact.url && (
+                    <a href={day.accommodationContact.url} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 4, background: `${cityColor}10`, border: `1px solid ${cityColor}25`, borderRadius: 8, padding: '3px 10px', color: cityColor, fontSize: 11, fontWeight: 500, textDecoration: 'none' }}>
+                      🔗 Website
+                    </a>
+                  )}
+                  {day.accommodationContact.address && (
+                    <a href={`https://maps.google.com/?q=${encodeURIComponent(day.accommodationContact.address)}`} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: 4, background: `${cityColor}10`, border: `1px solid ${cityColor}25`, borderRadius: 8, padding: '3px 10px', color: cityColor, fontSize: 11, fontWeight: 500, textDecoration: 'none' }}>
+                      📍 Map
+                    </a>
+                  )}
+                </div>
+              )}
             </div>
           )}
         </div>
