@@ -1,0 +1,25 @@
+databases:
+  - name: pack-and-paws-db
+    plan: free
+    databaseName: packandpaws
+    user: packandpaws
+
+services:
+  - type: web
+    name: pack-and-paws-api
+    plan: free
+    runtime: node
+    rootDir: apps/api
+    buildCommand: cd ../.. && pnpm install && cd apps/api && npx prisma generate && npx prisma migrate deploy && pnpm build
+    startCommand: node dist/index.js
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: pack-and-paws-db
+          property: connectionString
+      - key: JWT_SECRET
+        generateValue: true
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "3001"
